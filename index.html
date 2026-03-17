@@ -14,14 +14,14 @@
   <link rel="canonical" href="https://www.peakpatrimoine.fr">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰</text></svg>">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ProfessionalService","name":"Peak Patrimoine","description":"Conseiller en gestion de patrimoine à Nice. Stratégie patrimoniale sur-mesure pour cadres, dirigeants et indépendants.","url":"https://www.peakpatrimoine.fr","telephone":"+33668681188","email":"a.dussourd@peakpatrimoine.fr","image":"https://www.peakpatrimoine.fr/photo-alexandre.png","address":{"@type":"PostalAddress","streetAddress":"3 Avenue de la République","addressLocality":"Nice","postalCode":"06300","addressCountry":"FR"},"areaServed":"France","employee":{"@type":"Person","name":"Alexandre Dussourd","jobTitle":"Consultant patrimonial","image":"https://www.peakpatrimoine.fr/photo-alexandre.png","sameAs":"https://www.linkedin.com/in/alexdussourd/"}}
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"Peak Patrimoine","description":"Conseiller en gestion de patrimoine à Nice. Stratégie patrimoniale sur-mesure pour cadres, dirigeants et indépendants.","url":"https://www.peakpatrimoine.fr","telephone":"+33668681188","email":"contact@peakpatrimoine.fr","image":"https://www.peakpatrimoine.fr/photo-alexandre.png","address":{"@type":"PostalAddress","streetAddress":"3 Avenue de la République","addressLocality":"Nice","postalCode":"06300","addressCountry":"FR"},"areaServed":"France","employee":{"@type":"Person","name":"Alexandre Dussourd","jobTitle":"Consultant patrimonial","image":"https://www.peakpatrimoine.fr/photo-alexandre.png","sameAs":"https://www.linkedin.com/in/alexdussourd/"}}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     .hero{background:var(--noir);padding:110px 0 96px;position:relative;overflow:hidden;}
-    .hero-bg{position:absolute;inset:0;background:url('hero-mountain.jpg') center/cover no-repeat;opacity:0.32;z-index:0;pointer-events:none;}
+    .hero-bg{position:absolute;inset:0;background:url('hero-mountain.jpg') center/cover no-repeat;opacity:0.52;z-index:0;pointer-events:none;}
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,13,0.55) 0%,rgba(13,13,13,0.82) 100%);z-index:0;pointer-events:none;}
     
     
@@ -111,6 +111,21 @@
       .reviews-grid{grid-template-columns:1fr;}
     }
 
+
+    /* ── RECRUTEMENT ── */
+    .recruit-intro{font-size:16px;font-weight:300;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:28px;max-width:440px;}
+    .recruit-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:flex-start;}
+    .recruit-criteria{display:flex;flex-direction:column;gap:14px;}
+    .recruit-item{display:flex;align-items:flex-start;gap:12px;font-size:15px;font-weight:300;color:rgba(255,255,255,0.8);line-height:1.5;}
+    .recruit-check{color:var(--ambre);font-weight:600;font-size:16px;flex-shrink:0;margin-top:1px;}
+    .recruit-offer{background:rgba(255,255,255,0.04);border:1px solid rgba(240,167,56,0.2);border-radius:14px;padding:28px;}
+    .recruit-offer-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;color:var(--ambre);margin-bottom:20px;}
+    .recruit-offer-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .recruit-offer-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+    .recruit-offer-icon{font-size:22px;flex-shrink:0;width:36px;text-align:center;}
+    .recruit-offer-item strong{display:block;font-size:14px;font-weight:500;color:rgba(255,255,255,0.9);margin-bottom:4px;}
+    .recruit-offer-item p{font-size:13px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.6;}
+    @media(max-width:860px){.recruit-grid{grid-template-columns:1fr;gap:36px;}}
     @media(max-width:960px){
       .problem-layout{grid-template-columns:1fr;gap:48px;}
       .promise-grid{grid-template-columns:1fr 1fr;}
@@ -138,26 +153,27 @@
     <div class="nav-links">
       <a href="/" class="active">Accueil</a>
       <a href="/expertise.html">Expertise</a>
+      <a href="/rejoindre.html">Rejoindre l'équipe</a>
       <a href="/mentions-legales.html">Mentions légales</a>
-      <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener" class="nav-cta">Prendre RDV →</a>
+      <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener" class="nav-cta">Prendre contact →</a>
     </div>
   </div>
 </nav>
 
 <header class="hero"><div class="hero-bg"></div><div class="hero-overlay"></div>
   <div class="container hero-inner">
-    <span class="hero-eyebrow">Consultant patrimonial · Partout en France</span>
+    <span class="hero-eyebrow">Consultant patrimonial</span>
     <h1>L'<em>ultra</em> de la<br>stratégie patrimoniale</h1>
-    <p class="hero-sub">On transforme vos efforts en sérénité financière. Parce que vous méritez mieux qu'un banquier qui pousse ses produits.</p>
+    <p class="hero-sub">On transforme vos efforts en sérénité financière.<br>Parce que vous méritez mieux.</p>
     <div class="hero-actions">
-      <a class="btn btn-ambre" href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre rendez-vous →</a>
+      <a class="btn btn-ambre" href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre contact →</a>
       <a class="btn btn-outline" href="/expertise.html">Découvrir nos expertises</a>
     </div>
     <div class="hero-badges">
       <div class="hero-badge"><strong>Sans honoraires</strong><span>Aucun frais caché</span></div>
-      <div class="hero-badge"><strong>+100 partenaires</strong><span>Architecture ouverte</span></div>
-      <div class="hero-badge"><strong>+900 consultants</strong><span>Réseau ANACOFI</span></div>
-      <div class="hero-badge"><strong>France entière</strong><span>Disponible partout en France</span></div>
+      <div class="hero-badge"><strong>+100 partenaires</strong><span>De renoms, architecture ouverte</span></div>
+      <div class="hero-badge"><strong>+1000 consultants</strong><span>Association indépendante</span></div>
+      <div class="hero-badge"></div>
     </div>
   </div>
 </header>
@@ -178,7 +194,7 @@
         <div class="vs-row"><div class="vs-bad">Votre banquier pousse ses produits</div><div class="vs-good">On part de vos objectifs</div></div>
         <div class="vs-row"><div class="vs-bad">Honoraires à avancer</div><div class="vs-good">Zéro honoraire client</div></div>
         <div class="vs-row"><div class="vs-bad">Offre limitée à une banque</div><div class="vs-good">+100 partenaires ouverts</div></div>
-        <div class="vs-row"><div class="vs-bad">Signature, puis silence</div><div class="vs-good">Suivi long terme actif</div></div>
+        <div class="vs-row"><div class="vs-bad">Signature, puis silence</div><div class="vs-good">Suivi long terme</div></div>
         <div class="vs-row"><div class="vs-bad">Réservé aux gros patrimoines</div><div class="vs-good">Accessible dès maintenant</div></div>
       </div>
     </div>
@@ -191,11 +207,11 @@
     <h2 class="section-title">Une promesse qui<br>vous libère vraiment</h2>
     <p class="lead">Cadre, dirigeant, indépendant ou profession libérale : notre approche s'adapte à votre réalité.</p>
     <div class="promise-grid">
-      <div class="card"><div class="card-icon">🔓</div><h3>Un conseil accessible</h3><p>Aucune barrière à l'entrée. Pas besoin d'attendre "d'avoir assez" pour être bien conseillé. Ce qui compte, c'est votre volonté d'avancer.</p></div>
-      <div class="card"><div class="card-icon">💼</div><h3>Aucun honoraire à avancer</h3><p>Accompagnement rémunéré directement par nos partenaires sur les solutions mises en place. Sans frais cachés, sans surcoût pour vous.</p></div>
-      <div class="card"><div class="card-icon">🧭</div><h3>Approche 360° humaine</h3><p>Un conseiller partenaire unique qui vous connaît et vous accompagne pas à pas : constitution, développement, optimisation, transmission.</p></div>
-      <div class="card"><div class="card-icon">🏗️</div><h3>Architecture ouverte</h3><p>La gamme la plus large du marché : placements, immobilier, financement. Chaque solution est choisie pour vous, pas pour nous.</p></div>
-      <div class="card"><div class="card-icon">🤝</div><h3>La confiance au centre</h3><p>Suivi dans la durée, relation long terme, mises en relation naturelles. Pas de signature puis silence radio.</p></div>
+      <div class="card"><h3>Un conseil accessible</h3><p>Aucune barrière à l'entrée. Pas besoin d'attendre "d'avoir assez" pour être bien conseillé. Ce qui compte, c'est votre volonté d'avancer.</p></div>
+      <div class="card"><h3>Aucun honoraire à avancer</h3><p>Accompagnement rémunéré directement par nos partenaires sur les solutions mises en place. Sans frais cachés, sans surcoût pour vous.</p></div>
+      <div class="card"><h3>Approche 360° humaine</h3><p>Un conseiller partenaire unique qui vous connaît et vous accompagne pas à pas : constitution, développement, optimisation, transmission.</p></div>
+      <div class="card"><h3>Architecture ouverte</h3><p>La gamme la plus large du marché : placements, immobilier, financement. Chaque solution est choisie pour vous, pas pour nous.</p></div>
+      <div class="card"><h3>La confiance au centre de nos échanges</h3><p>Suivi dans la durée, relation long terme, mises en relation naturelles. Pas de signature puis silence radio.</p></div>
     </div>
   </div>
 </section>
@@ -217,14 +233,68 @@
 <section>
   <div class="container">
     <span class="label">Ce que vous y gagnez</span>
-    <h2 class="section-title">Ce que change un vrai<br>conseiller patrimonial</h2>
+    <h2 class="section-title">Plus qu'un simple conseiller,<br>un véritable partenaire dans vos projets de vie</h2>
     <div class="benefits-grid">
-      <div class="benefit"><span class="benefit-icon">⏱</span><h3>Du temps</h3><p>Pour vous concentrer sur l'essentiel : votre vie, vos envies, vos proches.</p></div>
-      <div class="benefit"><span class="benefit-icon">🔍</span><h3>De la clarté</h3><p>Vous comprenez vos choix. Vous avancez sans flou ni stress inutile.</p></div>
-      <div class="benefit"><span class="benefit-icon">🛡</span><h3>De la sécurité</h3><p>Méthode structurée, partenaires fiables, expertise rigoureuse.</p></div>
-      <div class="benefit"><span class="benefit-icon">🧱</span><h3>Un cap solide</h3><p>Aligné avec vos ambitions, vos valeurs, votre rythme de vie.</p></div>
-      <div class="benefit"><span class="benefit-icon">☀️</span><h3>De la sérénité</h3><p>Votre stratégie est claire, suivie, ajustée dans le temps.</p></div>
-      <div class="benefit"><span class="benefit-icon">📈</span><h3>De la performance</h3><p>Les bons leviers, activés au bon moment, pour vos vrais objectifs.</p></div>
+      <div class="benefit"><h3>Du temps</h3><p>Pour vous concentrer sur l'essentiel : votre vie, vos envies, vos proches.</p></div>
+      <div class="benefit"><h3>De la clarté</h3><p>Vous comprenez vos choix. Vous avancez sans flou ni stress inutile.</p></div>
+      <div class="benefit"><h3>De la sécurité</h3><p>Méthode structurée, partenaires fiables, expertise rigoureuse.</p></div>
+      <div class="benefit"><h3>Un cap solide</h3><p>Aligné avec vos ambitions, vos valeurs, votre rythme de vie.</p></div>
+      <div class="benefit"><h3>De la sérénité</h3><p>Votre stratégie est claire, suivie, ajustée dans le temps.</p></div>
+      <div class="benefit"><h3>De la performance</h3><p>Les bons leviers, activés au bon moment, pour vos vrais objectifs.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="dark">
+  <div class="container">
+    <span class="label">Développement du cabinet</span>
+    <h2 class="section-title">Rejoignez l'équipe<br>Peak Patrimoine</h2>
+    <p class="lead">Ce début d'année, j'ai ouvert 4 places pour former et accompagner des profils motivés à entreprendre. Il reste <strong style="color:var(--ambre);">2 places disponibles</strong>.</p>
+    <div class="recruit-grid">
+      <div class="recruit-left">
+        <p class="recruit-intro">Je recherche des personnes qui ont envie de se lancer dans un métier d'avenir, porteur de sens — et qui sont prêtes à s'en donner les moyens.</p>
+        <div class="recruit-criteria">
+          <div class="recruit-item"><span class="recruit-check">→</span><span>Vous vous êtes déjà intéressé à l'entrepreneuriat</span></div>
+          <div class="recruit-item"><span class="recruit-check">→</span><span>Vous souhaitez retrouver du sens dans un métier de conseil</span></div>
+          <div class="recruit-item"><span class="recruit-check">→</span><span>Vous aimez aider les gens et créer de la valeur</span></div>
+          <div class="recruit-item"><span class="recruit-check">→</span><span>Vous êtes prêt à acquérir de nouvelles compétences</span></div>
+        </div>
+        <a class="btn btn-ambre" href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener" style="margin-top:32px;display:inline-block;">Échanger sur le projet →</a>
+      </div>
+      <div class="recruit-right">
+        <div class="recruit-offer">
+          <div class="recruit-offer-title">Ce que vous intégrez</div>
+          <div class="recruit-offer-item">
+            <div class="recruit-offer-icon">🎓</div>
+            <div>
+              <strong>Formation complète de A à Z</strong>
+              <p>Via CGP Skool — un programme structuré pour maîtriser le métier, les produits et la relation client.</p>
+            </div>
+          </div>
+          <div class="recruit-offer-item">
+            <div class="recruit-offer-icon">🤝</div>
+            <div>
+              <strong>Accompagnement terrain personnalisé</strong>
+              <p>Je vous accompagne pas à pas dans vos premiers dossiers et votre montée en compétences.</p>
+            </div>
+          </div>
+          <div class="recruit-offer-item">
+            <div class="recruit-offer-icon">🏗️</div>
+            <div>
+              <strong>Un réseau solide</strong>
+              <p>Vous rejoignez le réseau Finzzle Groupe — +900 consultants, architecture ouverte, partenaires de référence.</p>
+            </div>
+          </div>
+          <div class="recruit-offer-item">
+            <div class="recruit-offer-icon">🚀</div>
+            <div>
+              <strong>Liberté &amp; revenus évolutifs</strong>
+              <p>Statut indépendant, rémunération à la hauteur de votre engagement, possibilité de développer votre propre équipe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -240,7 +310,7 @@
         <h2 class="about-name">Alexandre Dussourd</h2>
         <span class="about-role">Consultant patrimonial · Nice & partout en France</span>
         <p>Ex-ingénieur reconverti en consultant patrimonial, Peak Patrimoine est né d'un constat simple : <em>"sans stratégie, ni suivi, il est difficile d'agir."</em></p>
-        <p>Pour y répondre, nous avons choisi de nous entourer des meilleurs : en rejoignant un réseau national de <strong>+900 consultants experts</strong>, un partenaire de référence reconnu pour sa solidité auprès des institutionnels, et l'accès à une offre en <strong>architecture ouverte</strong> composée de <strong>+100 partenaires de renom</strong>.</p>
+        <p>Pour y répondre, nous avons choisi de nous entourer des meilleurs : membre d'une <strong>association de 1000+ consultants indépendants partout en France</strong>, un <strong>partenaire de référence</strong> dans la gestion de patrimoine, avec accès à des ingénieurs patrimoniaux, et l'accès à une offre en <strong>architecture ouverte</strong> composée de <strong>+100 partenaires de renom</strong>.</p>
         <p>Le tout pour vous offrir un accompagnement exigeant, accessible et sans compromis sur la qualité.</p>
         <div class="about-stats">
           <div><span class="stat-num">+100</span><span class="stat-lbl">Partenaires</span></div>
@@ -366,7 +436,7 @@
   <div class="container">
     <h2>Prêt à passer à l'action ?</h2>
     <p>Un premier rendez-vous sans engagement, sans honoraires.<br>On part de vous, pas de nos produits.</p>
-    <a class="btn btn-dark" href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre rendez-vous →</a>
+    <a class="btn btn-dark" href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre contact →</a>
   </div>
 </section>
 
@@ -381,12 +451,13 @@
         <h4>Navigation</h4>
         <a href="/">Accueil</a>
         <a href="/expertise.html">Expertise</a>
+      <a href="/rejoindre.html">Rejoindre l'équipe</a>
         <a href="/mentions-legales.html">Mentions légales</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="tel:+33668681188">06 68 68 11 88</a>
-        <a href="mailto:a.dussourd@peakpatrimoine.fr">a.dussourd@peakpatrimoine.fr</a>
+        
+        <a href="mailto:contact@peakpatrimoine.fr">contact@peakpatrimoine.fr</a>
         <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre rendez-vous</a>
         <a href="https://www.linkedin.com/in/alexdussourd/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
