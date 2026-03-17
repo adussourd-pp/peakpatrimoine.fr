@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rejoindre l'équipe — Peak Patrimoine · Devenir Consultant CGP</title>
+  <meta name="description" content="Vous voulez vous reconvertir en consultant patrimonial ? Rejoignez l'équipe Peak Patrimoine. Formation CGP Skool, partenaire de référence, accompagnement terrain. Partout en France.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.peakpatrimoine.fr/rejoindre.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰</text></svg>">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "Consultant en Gestion de Patrimoine",
+    "description": "Rejoignez l'équipe Peak Patrimoine. Formation CGP Skool, partenaire de référence, accompagnement terrain. Reconversion professionnelle bienvenue.",
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "Peak Patrimoine",
+      "sameAs": "https://www.peakpatrimoine.fr"
+    },
+    "jobLocationType": "TELECOMMUTE",
+    "applicantLocationRequirements": {
+      "@type": "Country",
+      "name": "France"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── HERO ── */
+    .hero {
+      background: var(--noir);
+      padding: 110px 0 96px;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('hero-mountain.jpg') center/cover no-repeat;
+      opacity: 0.28; z-index: 0; pointer-events: none;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.82) 100%);
+      z-index: 0; pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; }
+    .hero-eyebrow {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ambre-m); margin-bottom: 26px; display: block;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 5vw, 62px);
+      font-weight: 600; color: var(--blanc);
+      line-height: 1.12; margin-bottom: 22px; max-width: 700px;
+    }
+    .hero h1 em { font-style: italic; color: var(--ambre); }
+    .hero-sub {
+      font-size: 17px; font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8; max-width: 520px; margin-bottom: 44px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+
+    /* ── ACCROCHE ── */
+    .accroche-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 72px; align-items: center;
+    }
+    .accroche-text p {
+      font-size: 16px; font-weight: 300;
+      color: #3a3a3a; line-height: 1.88; margin-bottom: 18px;
+    }
+    .accroche-text p strong { font-weight: 500; color: var(--noir); }
+    blockquote {
+      margin-top: 28px; padding: 20px 24px;
+      border-left: 3px solid var(--ambre);
+      background: var(--ambre-l); border-radius: 0 10px 10px 0;
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-size: 16px;
+      color: #7A4E0A; line-height: 1.65;
+    }
+    .accroche-visual {
+      background: var(--noir-2);
+      border-radius: 16px; padding: 36px;
+      border: 1px solid rgba(240,167,56,0.1);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .accroche-stat {
+      display: flex; align-items: center; gap: 16px;
+      padding: 14px 16px;
+      background: rgba(240,167,56,0.07);
+      border: 1px solid rgba(240,167,56,0.15);
+      border-radius: 10px;
+    }
+    .accroche-stat-icon { font-size: 24px; flex-shrink: 0; }
+    .accroche-stat-text strong {
+      display: block; font-size: 15px; font-weight: 500;
+      color: var(--blanc); margin-bottom: 2px;
+    }
+    .accroche-stat-text span {
+      font-size: 12px; font-weight: 300;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ── POURQUOI ── */
+    .why-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+
+    /* ── PARCOURS ── */
+    .parcours-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; position: relative;
+    }
+    .parcours-steps::before {
+      content: '';
+      position: absolute; top: 27px; left: 28px; right: 28px; height: 1px;
+      background: linear-gradient(90deg, var(--ambre) 0%, rgba(240,167,56,0.15) 100%);
+    }
+    .parcours-step { padding-right: 20px; }
+    .parcours-num {
+      width: 54px; height: 54px;
+      border: 1.5px solid var(--ambre); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 20px;
+      font-weight: 600; color: var(--ambre);
+      background: var(--noir); margin-bottom: 22px; position: relative; z-index: 1;
+    }
+    .parcours-step h3 {
+      font-size: 15px; font-weight: 600;
+      color: var(--blanc); margin-bottom: 10px; line-height: 1.3;
+    }
+    .parcours-step p {
+      font-size: 13px; font-weight: 300;
+      color: rgba(255,255,255,0.42); line-height: 1.72;
+    }
+
+    /* ── PROFIL IDÉAL ── */
+    .profil-layout {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    }
+    .profil-oui, .profil-non {
+      border-radius: 14px; padding: 28px 24px;
+    }
+    .profil-oui {
+      background: rgba(240,167,56,0.06);
+      border: 1px solid rgba(240,167,56,0.2);
+    }
+    .profil-non {
+      background: var(--gris-l);
+      border: 1px solid var(--bord);
+    }
+    .profil-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 600;
+      margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+    }
+    .profil-oui .profil-title { color: var(--ambre-d); }
+    .profil-non .profil-title { color: var(--gris); }
+    .profil-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 14px; font-weight: 300;
+      color: #333; line-height: 1.6; margin-bottom: 12px;
+    }
+    .profil-item::before {
+      content: '✓';
+      color: var(--ambre); font-weight: 600;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .profil-non .profil-item::before {
+      content: '✕';
+      color: var(--gris);
+    }
+
+    /* ── FORMATION ── */
+    .formation-layout {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: center;
+    }
+    .formation-badge {
+      background: var(--ambre-l);
+      border: 1.5px solid var(--ambre);
+      border-radius: 16px; padding: 32px;
+      text-align: center;
+    }
+    .formation-badge .badge-logo {
+      font-size: 48px; margin-bottom: 12px; display: block;
+    }
+    .formation-badge h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 600;
+      color: var(--ambre-d); margin-bottom: 6px;
+    }
+    .formation-badge p {
+      font-size: 13px; font-weight: 300; color: #7A4E0A; line-height: 1.6;
+    }
+    .formation-badge .badge-tag {
+      display: inline-block; margin-top: 14px;
+      font-size: 10px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--ambre-d); background: var(--blanc);
+      border: 1px solid var(--ambre-m); padding: 4px 14px; border-radius: 20px;
+    }
+    .formation-text p {
+      font-size: 15px; font-weight: 300; color: #3a3a3a;
+      line-height: 1.85; margin-bottom: 16px;
+    }
+    .formation-text p strong { font-weight: 500; color: var(--noir); }
+    .formation-list {
+      list-style: none; margin-top: 20px;
+    }
+    .formation-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 14px; font-weight: 300; color: #333;
+      line-height: 1.65; margin-bottom: 12px;
+    }
+    .formation-list li::before {
+      content: '→';
+      color: var(--ambre); font-weight: 600; flex-shrink: 0;
+    }
+
+    /* ── CTA BAND ── */
+    .cta-band {
+      background: var(--ambre); padding: 96px 0; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .cta-band::before {
+      content: ''; position: absolute; top: -60px; right: -60px;
+      width: 300px; height: 300px;
+      border: 1px solid rgba(0,0,0,0.08); border-radius: 50%;
+    }
+    .cta-band h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 600; color: var(--noir); margin-bottom: 14px;
+    }
+    .cta-band p {
+      font-size: 16px; font-weight: 300;
+      color: rgba(13,13,13,0.65); margin-bottom: 36px; line-height: 1.65;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .accroche-layout, .formation-layout, .profil-layout { grid-template-columns: 1fr; gap: 40px; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .parcours-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .parcours-steps::before { display: none; }
+    }
+    @media (max-width: 600px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .parcours-steps { grid-template-columns: 1fr; }
+      .profil-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">Peak<span>Patrimoine</span></a>
+    <div class="nav-links">
+      <a href="/">Accueil</a>
+      <a href="/expertise.html">Expertise</a>
+      <a href="/rejoindre.html" class="active">Rejoindre l'équipe</a>
+      <a href="/mentions-legales.html">Mentions légales</a>
+      <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener" class="nav-cta">Prendre RDV →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <span class="hero-eyebrow">Développement d'équipe · Partout en France</span>
+    <h1>Construisez une activité<br>à la hauteur de vos <em>ambitions</em></h1>
+    <p class="hero-sub">Vous cherchez du sens, de la liberté et un vrai potentiel de revenus ? Rejoignez une équipe de consultants patrimoniaux qui construisent quelque chose de solide.</p>
+    <div class="hero-actions">
+      <a class="btn btn-ambre" href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Échanger avec Alexandre →</a>
+      <a class="btn btn-outline" href="#parcours">Voir le parcours</a>
+    </div>
+  </div>
+</header>
+
+<!-- ACCROCHE -->
+<section>
+  <div class="container">
+    <div class="accroche-layout">
+      <div class="accroche-text">
+        <span class="label">Pourquoi rejoindre l'équipe</span>
+        <h2 class="section-title">Un métier qui a du sens.<br>Une liberté qui se construit.</h2>
+        <p>Vous êtes salarié, entrepreneur ou en reconversion. Vous cherchez un métier où vous <strong>aidez vraiment les gens</strong>, où vos revenus reflètent votre engagement, et où vous êtes libre d'organiser votre vie.</p>
+        <p>Le métier de consultant patrimonial, c'est exactement ça. Et avec le bon réseau, la bonne formation et le bon accompagnement, <strong>c'est accessible bien plus vite que vous ne le pensez</strong>.</p>
+        <p>Au sein de l'équipe Peak Patrimoine, rattachée à un <strong>partenaire de référence reconnu par les institutionnels</strong>, vous bénéficiez d'une structure solide, d'un accompagnement terrain et d'un modèle de développement qui vous permet de grandir à votre rythme — et de faire grandir votre équipe.</p>
+        <blockquote>"J'étais ingénieur. J'ai choisi de mettre mes compétences au service des gens. Ce métier m'a donné la liberté que je cherchais."</blockquote>
+      </div>
+      <div class="accroche-visual">
+        <div class="accroche-stat">
+          <div class="accroche-stat-icon">🏢</div>
+          <div class="accroche-stat-text">
+            <strong>Partenaire de référence</strong>
+            <span>Partenaire de référence reconnu par les institutionnels</span>
+          </div>
+        </div>
+        <div class="accroche-stat">
+          <div class="accroche-stat-icon">🎓</div>
+          <div class="accroche-stat-text">
+            <strong>Formation CGP Skool</strong>
+            <span>Programme de formation structuré et certifiant</span>
+          </div>
+        </div>
+        <div class="accroche-stat">
+          <div class="accroche-stat-icon">🌍</div>
+          <div class="accroche-stat-text">
+            <strong>Partout en France</strong>
+            <span>Activité 100% en remote, à votre rythme</span>
+          </div>
+        </div>
+        <div class="accroche-stat">
+          <div class="accroche-stat-icon">📈</div>
+          <div class="accroche-stat-text">
+            <strong>Revenus non plafonnés</strong>
+            <span>Rémunération à la commission + développement d'équipe</span>
+          </div>
+        </div>
+        <div class="accroche-stat">
+          <div class="accroche-stat-icon">🤝</div>
+          <div class="accroche-stat-text">
+            <strong>+1000 consultants indépendants</strong>
+            <span>Une association nationale de consultants indépendants partout en France</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="alt">
+  <div class="container">
+    <span class="label">Ce que vous y gagnez</span>
+    <h2 class="section-title">Ce que le modèle<br>vous apporte concrètement</h2>
+    <p class="lead">Un cadre solide pour construire une activité durable, à votre rythme.</p>
+    <div class="why-grid">
+      <div class="card">
+        <div class="card-icon">🔓</div>
+        <h3>Liberté totale d'organisation</h3>
+        <p>Vous gérez votre agenda, vos clients, votre rythme. Pas de bureau imposé, pas d'horaires fixes. Vous êtes entrepreneur de votre activité.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎓</div>
+        <h3>Formation CGP Skool</h3>
+        <p>Un programme structuré et progressif pour maîtriser le métier de consultant patrimonial, même sans formation financière préalable.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤝</div>
+        <h3>Accompagnement terrain</h3>
+        <p>Alexandre vous accompagne personnellement sur vos premiers dossiers. Vous n'êtes jamais seul face à vos clients ni face à vos questions.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏗️</div>
+        <h3>Architecture ouverte</h3>
+        <p>Accès à +100 partenaires sélectionnés. Vous proposez les meilleures solutions du marché, pas celles d'une seule banque ou assurance.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3>Développement d'équipe</h3>
+        <p>Le modèle vous permet de recruter et former vos propres consultants. Vos revenus grandissent avec votre équipe.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌍</div>
+        <h3>Réseau national</h3>
+        <p>+1000 consultants indépendants dans toute la France. Une communauté active, des événements réguliers, un réseau qui génère des opportunités.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARCOURS -->
+<section class="dark" id="parcours">
+  <div class="container">
+    <span class="label">Comment ça se passe</span>
+    <h2 class="section-title">Votre parcours pour<br>démarrer en 4 étapes</h2>
+    <p class="lead">De l'échange initial à votre premier client — un chemin clair et accompagné.</p>
+    <div class="parcours-steps">
+      <div class="parcours-step">
+        <div class="parcours-num">1</div>
+        <h3>Échange découverte</h3>
+        <p>Un premier appel avec Alexandre pour comprendre votre situation, vos objectifs et vérifier que le projet vous correspond vraiment.</p>
+      </div>
+      <div class="parcours-step">
+        <div class="parcours-num">2</div>
+        <h3>Intégration réseau</h3>
+        <p>Signature des accords, accès à la plateforme de formation, immatriculation ORIAS. On s'occupe de tout l'administratif avec vous.</p>
+      </div>
+      <div class="parcours-step">
+        <div class="parcours-num">3</div>
+        <h3>Formation CGP Skool</h3>
+        <p>Accès au programme de formation complet. Modules progressifs, cas pratiques, certification. Vous avancez à votre rythme.</p>
+      </div>
+      <div class="parcours-step">
+        <div class="parcours-num">4</div>
+        <h3>Premiers clients</h3>
+        <p>Accompagné par Alexandre sur vos premiers dossiers. Vous montez en compétence sur le terrain, avec un filet de sécurité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFIL IDÉAL -->
+<section>
+  <div class="container">
+    <span class="label">Est-ce fait pour vous ?</span>
+    <h2 class="section-title">Le profil qu'on recherche</h2>
+    <p class="lead">Pas besoin d'un master en finance. Mais certaines qualités font toute la différence.</p>
+    <div class="profil-layout">
+      <div class="profil-oui">
+        <div class="profil-title">✓ Vous correspondez si…</div>
+        <div class="profil-item">Vous êtes en reconversion et cherchez du sens</div>
+        <div class="profil-item">Vous aimez les relations humaines et la confiance</div>
+        <div class="profil-item">Vous êtes autonome et organisé</div>
+        <div class="profil-item">Vous cherchez un revenu qui reflète votre effort</div>
+        <div class="profil-item">Vous avez envie de construire quelque chose à long terme</div>
+        <div class="profil-item">Vous êtes curieux et prêt à apprendre un nouveau métier</div>
+        <div class="profil-item">Vous avez un réseau personnel ou professionnel à activer</div>
+      </div>
+      <div class="profil-non">
+        <div class="profil-title" style="color:var(--gris)">✕ Ce n'est pas pour vous si…</div>
+        <div class="profil-item">Vous cherchez un salaire fixe garanti dès le départ</div>
+        <div class="profil-item">Vous n'êtes pas à l'aise avec la relation client</div>
+        <div class="profil-item">Vous voulez quelque chose qui rapporte sans s'investir</div>
+        <div class="profil-item">Vous n'êtes pas prêt à vous former sérieusement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATION -->
+<section class="alt">
+  <div class="container">
+    <span class="label">La formation</span>
+    <h2 class="section-title">CGP Skool — apprendre<br>le métier par la pratique</h2>
+    <div class="formation-layout">
+      <div class="formation-badge">
+        <span class="badge-logo">🎓</span>
+        <h3>CGP Skool</h3>
+        <p>La plateforme de formation des consultants patrimoniaux du notre association de consultants indépendants.</p>
+        <span class="badge-tag">Formation certifiante</span>
+      </div>
+      <div class="formation-text">
+        <p>CGP Skool c'est le programme de formation que j'utilise pour former mes recrues. Il a été conçu spécifiquement pour le métier de consultant patrimonial, en partant de zéro jusqu'à la certification.</p>
+        <p><strong>Pas besoin d'avoir fait des études en finance.</strong> Le programme est progressif, concret et directement applicable sur le terrain dès les premières semaines.</p>
+        <ul class="formation-list">
+          <li>Les fondamentaux du patrimoine et de la fiscalité</li>
+          <li>Les produits financiers et immobiliers en architecture ouverte</li>
+          <li>La méthode de découverte client et d'audit patrimonial</li>
+          <li>Les outils de simulation et de présentation</li>
+          <li>Le développement commercial et la construction de réseau</li>
+          <li>La certification et l'immatriculation ORIAS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Prêt à en savoir plus ?</h2>
+    <p>Un échange de 30 minutes avec Alexandre pour voir si le projet vous correspond.<br>Sans engagement, sans pression.</p>
+    <a class="btn btn-dark" href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Échanger avec Alexandre →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="footer-logo" href="/">Peak<span>Patrimoine</span></a>
+        <p>Consultant patrimonial partout en France.<br>Stratégie patrimoniale sur-mesure et<br>développement d'équipe via notre association nationale.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="/">Accueil</a>
+        <a href="/expertise.html">Expertise</a>
+        <a href="/rejoindre.html">Rejoindre l'équipe</a>
+        <a href="/mentions-legales.html">Mentions légales</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+33668681188">06 68 68 11 88</a>
+        <a href="mailto:a.dussourd@peakpatrimoine.fr">a.dussourd@peakpatrimoine.fr</a>
+        <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre rendez-vous</a>
+        <a href="https://www.linkedin.com/in/alexdussourd/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Peak Patrimoine — Alexandre Dussourd</p>
+      <p>ORIAS n° 22002240 — Activité réglementée par l'ACPR et l'AMF</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Chat Elfsight -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-391c3857-384e-46b6-a1a9-1c270654a9b5" data-elfsight-app-lazy></div>
+
+</body>
+</html>
