@@ -113,6 +113,66 @@
     }
 
     /* ── PARCOURS ── */
+    .phases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 8px;
+    }
+    .phase-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(240,167,56,0.2);
+      border-radius: 14px;
+      padding: 28px 24px;
+    }
+    .phase-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: rgba(240,167,56,0.2);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .phase-question {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--blanc);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .phase-tag {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ambre);
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(240,167,56,0.15);
+    }
+    .phase-list {
+      list-style: none;
+      padding: 0;
+    }
+    .phase-list li {
+      font-size: 13.5px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      margin-bottom: 8px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .phase-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--ambre);
+      font-weight: 600;
+    }
+    .phase-list li strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
     .parcours-steps {
       display: grid; grid-template-columns: repeat(4, 1fr);
       gap: 0; position: relative;
@@ -247,12 +307,132 @@
     @media (max-width: 900px) {
       .accroche-layout, .formation-layout, .profil-layout { grid-template-columns: 1fr; gap: 40px; }
       .why-grid { grid-template-columns: 1fr 1fr; }
-      .parcours-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .phases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 8px;
+    }
+    .phase-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(240,167,56,0.2);
+      border-radius: 14px;
+      padding: 28px 24px;
+    }
+    .phase-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: rgba(240,167,56,0.2);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .phase-question {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--blanc);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .phase-tag {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ambre);
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(240,167,56,0.15);
+    }
+    .phase-list {
+      list-style: none;
+      padding: 0;
+    }
+    .phase-list li {
+      font-size: 13.5px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      margin-bottom: 8px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .phase-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--ambre);
+      font-weight: 600;
+    }
+    .phase-list li strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+    .phases-grid { grid-template-columns: 1fr; } .parcours-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
       .parcours-steps::before { display: none; }
     }
     @media (max-width: 600px) {
       .why-grid { grid-template-columns: 1fr; }
-      .parcours-steps { grid-template-columns: 1fr; }
+      .phases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 8px;
+    }
+    .phase-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(240,167,56,0.2);
+      border-radius: 14px;
+      padding: 28px 24px;
+    }
+    .phase-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: rgba(240,167,56,0.2);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .phase-question {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--blanc);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .phase-tag {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ambre);
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(240,167,56,0.15);
+    }
+    .phase-list {
+      list-style: none;
+      padding: 0;
+    }
+    .phase-list li {
+      font-size: 13.5px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      margin-bottom: 8px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .phase-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--ambre);
+      font-weight: 600;
+    }
+    .phase-list li strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+    .parcours-steps { grid-template-columns: 1fr; }
       .profil-layout { grid-template-columns: 1fr; }
     }
   </style>
@@ -384,39 +564,52 @@
 <section class="dark" id="parcours">
   <div class="container">
     <span class="label">Comment ça se passe</span>
-    <h2 class="section-title">Votre parcours pour<br>démarrer en 6 étapes</h2>
-    <p class="lead">De la découverte sans engagement jusqu'à votre première clientèle pérenne.</p>
-    <div class="parcours-steps">
-      <div class="parcours-step">
-        <div class="parcours-num">1</div>
-        <h3>Premier appel — 15 min</h3>
-        <p>Un échange rapide pour comprendre votre situation, vos motivations et vérifier que le projet vous correspond avant d'aller plus loin.</p>
+    <h2 class="section-title">Un parcours en 3 phases,<br>sans engagement au départ</h2>
+    <p class="lead">Trois questions simples pour avancer à votre rythme, en toute clarté.</p>
+
+    <div class="phases-grid">
+
+      <!-- PHASE 1 -->
+      <div class="phase-card">
+        <div class="phase-num">01</div>
+        <h3 class="phase-question">Est-ce que ça peut me plaire ?</h3>
+        <div class="phase-tag">Parcours découverte — sans engagement</div>
+        <ul class="phase-list">
+          <li>Premier appel de 15 min</li>
+          <li>Demi-journée découverte métier (4h)</li>
+          <li>Atelier démarrage (1 jour)</li>
+          <li>3 jours de la réussite pour tester le métier</li>
+        </ul>
       </div>
-      <div class="parcours-step">
-        <div class="parcours-num">2</div>
-        <h3>Demi-journée découverte métier</h3>
-        <p>Une matinée immersive pour découvrir concrètement le quotidien du consultant patrimonial, l'environnement, les produits et la relation client.</p>
+
+      <!-- PHASE 2 -->
+      <div class="phase-card">
+        <div class="phase-num">02</div>
+        <h3 class="phase-question">Est-ce que c'est fait pour moi ?</h3>
+        <div class="phase-tag">Validation terrain</div>
+        <ul class="phase-list">
+          <li>Suis-je capable de trouver des clients ?</li>
+          <li>Études de marchés</li>
+          <li>RDV clients accompagnés par des seniors</li>
+          <li>Me former aux solutions via FORMAN</li>
+          <li>Commander ma première habilitation</li>
+          <li>Je me prouve que <strong>je peux réussir</strong></li>
+        </ul>
       </div>
-      <div class="parcours-step">
-        <div class="parcours-num">3</div>
-        <h3>1 jour de démarrage</h3>
-        <p>Une première journée pour poser les bases, comprendre les outils, la méthode et vous projeter concrètement dans l'activité.</p>
+
+      <!-- PHASE 3 -->
+      <div class="phase-card">
+        <div class="phase-num">03</div>
+        <h3 class="phase-question">Comment pérenniser<br>mon activité ?</h3>
+        <div class="phase-tag">Plan 1 — 3 — 5 — 7 ans</div>
+        <ul class="phase-list">
+          <li>0-1 an : je suis opérationnel</li>
+          <li>1-3 ans : je vis bien du métier</li>
+          <li>3-5 ans : j'ai une entreprise pérenne</li>
+          <li>5-7 ans : je suis la référence de mon secteur</li>
+        </ul>
       </div>
-      <div class="parcours-step">
-        <div class="parcours-num">4</div>
-        <h3>3 jours pour tester le métier</h3>
-        <p>Un cursus découverte sans engagement pour tester le métier en conditions réelles et valider que c'est fait pour vous.</p>
-      </div>
-      <div class="parcours-step">
-        <div class="parcours-num">5</div>
-        <h3>Est-ce que je peux réussir ?</h3>
-        <p>Phase de montée en compétences — formation certifiée QUALIOPI, mentorat par des conseillers seniors, premières habilitations réglementaires.</p>
-      </div>
-      <div class="parcours-step">
-        <div class="parcours-num">6</div>
-        <h3>Pérenniser son activité</h3>
-        <p>Les premiers clients accompagnés, la construction d'une clientèle durable et le développement de votre propre équipe si vous le souhaitez.</p>
-      </div>
+
     </div>
   </div>
 </section>
