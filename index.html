@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peak Patrimoine — Conseiller en Gestion de Patrimoine à Nice</title>
+  <meta name="description" content="Peak Patrimoine, conseiller en gestion de patrimoine à Nice. Stratégie patrimoniale sur-mesure pour cadres, dirigeants et indépendants. Premier rendez-vous gratuit, sans honoraires.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Peak Patrimoine — CGP à Nice">
+  <meta property="og:description" content="Stratégie patrimoniale sur-mesure. Sans honoraires. Pour cadres, dirigeants et indépendants sur la Côte d'Azur.">
+  <meta property="og:url" content="https://www.peakpatrimoine.fr">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.peakpatrimoine.fr/photo-alexandre.png">
+  <link rel="canonical" href="https://www.peakpatrimoine.fr">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰</text></svg>">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"Peak Patrimoine","description":"Conseiller en gestion de patrimoine à Nice. Stratégie patrimoniale sur-mesure pour cadres, dirigeants et indépendants.","url":"https://www.peakpatrimoine.fr","telephone":"+33668681188","email":"a.dussourd@peakpatrimoine.fr","image":"https://www.peakpatrimoine.fr/photo-alexandre.png","address":{"@type":"PostalAddress","streetAddress":"3 Avenue de la République","addressLocality":"Nice","postalCode":"06300","addressCountry":"FR"},"areaServed":["Nice","Alpes-Maritimes","Provence-Alpes-Côte d'Azur"],"employee":{"@type":"Person","name":"Alexandre Dussourd","jobTitle":"Conseiller en Gestion de Patrimoine","image":"https://www.peakpatrimoine.fr/photo-alexandre.png","sameAs":"https://www.linkedin.com/in/alexdussourd/"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero{background:var(--noir);padding:110px 0 96px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;top:-120px;right:-120px;width:600px;height:600px;border:1px solid rgba(240,167,56,0.12);border-radius:50%;pointer-events:none;}
+    .hero::after{content:'';position:absolute;bottom:-80px;left:15%;width:300px;height:300px;border:1px solid rgba(240,167,56,0.07);border-radius:50%;pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;}
+    .hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--ambre-m);margin-bottom:26px;display:block;}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(40px,5.5vw,68px);font-weight:600;color:var(--blanc);line-height:1.1;margin-bottom:24px;max-width:720px;}
+    .hero h1 em{font-style:italic;color:var(--ambre);}
+    .hero-sub{font-size:17px;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.8;max-width:500px;margin-bottom:44px;}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+    .hero-badges{display:flex;flex-wrap:wrap;gap:32px;margin-top:60px;padding-top:48px;border-top:1px solid rgba(255,255,255,0.07);}
+    .hero-badge strong{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.85);margin-bottom:3px;}
+    .hero-badge span{font-size:12px;color:rgba(255,255,255,0.3);}
+
+    .problem-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+    .problem-text p{font-size:15.5px;font-weight:300;color:#3a3a3a;line-height:1.88;margin-bottom:18px;}
+    .problem-text p strong{font-weight:500;color:var(--noir);}
+    blockquote{margin-top:32px;padding:22px 26px;border-left:3px solid var(--ambre);background:var(--ambre-l);border-radius:0 10px 10px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:16px;color:#7A4E0A;line-height:1.65;}
+    .vs-box{background:var(--noir-2);border-radius:16px;padding:32px;border:1px solid rgba(240,167,56,0.1);}
+    .vs-header{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+    .vs-header span{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.13em;padding:0 4px;}
+    .vh-bad{color:rgba(255,255,255,0.2);}
+    .vh-good{color:var(--ambre);}
+    .vs-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+    .vs-bad,.vs-good{padding:12px 14px;border-radius:8px;font-size:13px;font-weight:300;line-height:1.5;}
+    .vs-bad{background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.28);border:1px solid rgba(255,255,255,0.05);}
+    .vs-bad::before{content:'✕  ';color:#555;}
+    .vs-good{background:rgba(240,167,56,0.1);color:rgba(255,255,255,0.82);border:1px solid rgba(240,167,56,0.22);}
+    .vs-good::before{content:'✓  ';color:var(--ambre);font-weight:600;}
+
+    .promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .promise-grid .card:last-child{grid-column:span 3;}
+
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+    .steps::before{content:'';position:absolute;top:27px;left:28px;right:28px;height:1px;background:linear-gradient(90deg,var(--ambre) 0%,rgba(240,167,56,0.15) 100%);}
+    .step{padding-right:20px;}
+    .step-num{width:54px;height:54px;border:1.5px solid var(--ambre);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--ambre);background:var(--noir);margin-bottom:22px;position:relative;z-index:1;}
+    .step h3{font-size:15px;font-weight:600;color:var(--blanc);margin-bottom:10px;line-height:1.3;}
+    .step p{font-size:13px;font-weight:300;color:rgba(255,255,255,0.42);line-height:1.72;}
+
+    .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .benefit{background:var(--blanc);border:1px solid var(--bord);border-radius:14px;padding:28px 22px;}
+    .benefit-icon{font-size:26px;margin-bottom:12px;display:block;}
+    .benefit h3{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--noir);margin-bottom:8px;}
+    .benefit p{font-size:13px;font-weight:300;color:var(--gris);line-height:1.65;}
+
+    .about-layout{display:grid;grid-template-columns:400px 1fr;gap:72px;align-items:center;}
+    .about-img-wrap{position:relative;flex-shrink:0;}
+    .about-img-wrap::before{content:'';position:absolute;top:-16px;left:-16px;right:16px;bottom:16px;border:1.5px solid var(--ambre);border-radius:18px;z-index:0;opacity:0.5;}
+    .about-img-wrap::after{content:'';position:absolute;top:-8px;left:-8px;right:8px;bottom:8px;border:1px solid var(--ambre-m);border-radius:16px;z-index:0;}
+    .about-img{width:100%;border-radius:14px;display:block;position:relative;z-index:1;aspect-ratio:1/1;object-fit:cover;object-position:center top;}
+    .about-name{font-family:'Playfair Display',serif;font-size:34px;font-weight:600;color:var(--noir);margin-bottom:6px;}
+    .about-role{font-size:11px;font-weight:600;color:var(--ambre);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:24px;display:block;}
+    .about-text p{font-size:15px;font-weight:300;color:#444;line-height:1.88;margin-bottom:16px;}
+    .about-stats{display:flex;gap:32px;padding:22px 0;margin:20px 0;border-top:1px solid var(--bord);border-bottom:1px solid var(--bord);}
+    .stat-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:600;color:var(--ambre);display:block;line-height:1;}
+    .stat-lbl{font-size:11px;color:var(--gris);text-transform:uppercase;letter-spacing:0.06em;}
+    .linkedin-btn{display:inline-flex;align-items:center;gap:10px;background:var(--noir);color:var(--blanc);font-size:13px;font-weight:500;padding:12px 22px;border-radius:6px;text-decoration:none;margin-top:8px;transition:background 0.2s;}
+    .linkedin-btn:hover{background:var(--gris-f);}
+
+    .cta-band{background:var(--ambre);padding:96px 0;text-align:center;position:relative;overflow:hidden;}
+    .cta-band::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border:1px solid rgba(0,0,0,0.08);border-radius:50%;pointer-events:none;}
+    .cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;color:var(--noir);margin-bottom:14px;}
+    .cta-band p{font-size:16px;font-weight:300;color:rgba(13,13,13,0.65);margin-bottom:36px;line-height:1.65;}
+
+    /* ── AVIS CLIENTS ── */
+    .reviews-score-row{display:flex;gap:16px;margin-bottom:48px;flex-wrap:wrap;}
+    .reviews-score-box{background:var(--blanc);border:1px solid var(--bord);border-radius:14px;padding:24px 28px;display:flex;flex-direction:column;gap:8px;min-width:200px;flex:1;}
+    .reviews-logo-tp,.reviews-logo-g{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--noir);}
+    .reviews-stars{color:#F0A738;font-size:20px;letter-spacing:2px;}
+    .reviews-score-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--noir);line-height:1;}
+    .reviews-score-num span{font-size:16px;color:var(--gris);font-family:'Outfit',sans-serif;font-weight:300;}
+    .reviews-link{font-size:13px;color:var(--ambre-d);text-decoration:none;font-weight:500;}
+    .reviews-link:hover{text-decoration:underline;}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .review-card{background:var(--blanc);border:1px solid var(--bord);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px;}
+    .review-stars{color:#F0A738;font-size:15px;letter-spacing:1px;}
+    .review-text{font-size:13.5px;font-weight:300;color:#3a3a3a;line-height:1.72;font-style:italic;flex:1;}
+    .review-author{display:flex;align-items:center;gap:10px;}
+    .review-avatar{width:36px;height:36px;border-radius:50%;background:var(--ambre);color:var(--noir);font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .review-name{font-size:13px;font-weight:500;color:var(--noir);}
+    .review-source{font-size:11px;color:var(--gris);}
+
+    @media(max-width:960px){
+      .reviews-grid{grid-template-columns:1fr 1fr;}
+    }
+    @media(max-width:600px){
+      .reviews-grid{grid-template-columns:1fr;}
+    }
+
+    @media(max-width:960px){
+      .problem-layout{grid-template-columns:1fr;gap:48px;}
+      .promise-grid{grid-template-columns:1fr 1fr;}
+      .promise-grid .card:last-child{grid-column:span 2;}
+      .steps{grid-template-columns:1fr 1fr;gap:32px;}
+      .steps::before{display:none;}
+      .about-layout{grid-template-columns:1fr;gap:44px;}
+      .about-img-wrap{max-width:340px;}
+    }
+    @media(max-width:600px){
+      .promise-grid{grid-template-columns:1fr;}
+      .promise-grid .card:last-child{grid-column:span 1;}
+      .steps{grid-template-columns:1fr;}
+      .benefits-grid{grid-template-columns:1fr 1fr;}
+      .hero h1{font-size:36px;}
+    }
+    @media(max-width:420px){.benefits-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">Peak<span>Patrimoine</span></a>
+    <div class="nav-links">
+      <a href="/" class="active">Accueil</a>
+      <a href="/expertise.html">Expertise</a>
+      <a href="/mentions-legales.html">Mentions légales</a>
+      <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener" class="nav-cta">Prendre RDV →</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <span class="hero-eyebrow">Conseiller en Gestion de Patrimoine · Nice · Côte d'Azur</span>
+    <h1>L'<em>ultra</em> de la<br>stratégie patrimoniale</h1>
+    <p class="hero-sub">On transforme vos efforts en sérénité financière. Parce que vous méritez mieux qu'un banquier qui pousse ses produits.</p>
+    <div class="hero-actions">
+      <a class="btn btn-ambre" href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre rendez-vous →</a>
+      <a class="btn btn-outline" href="/expertise.html">Découvrir nos expertises</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge"><strong>Sans honoraires</strong><span>Aucun frais caché</span></div>
+      <div class="hero-badge"><strong>+100 partenaires</strong><span>Architecture ouverte</span></div>
+      <div class="hero-badge"><strong>+900 consultants</strong><span>Réseau ANACOFI</span></div>
+      <div class="hero-badge"><strong>Nice &amp; PACA</strong><span>Déplacement possible</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="problem-layout">
+      <div class="problem-text">
+        <span class="label">Pourquoi Peak Patrimoine</span>
+        <h2 class="section-title">Vous avez un bon revenu.<br>Votre patrimoine devrait<br>progresser plus vite.</h2>
+        <p>Vous travaillez dur, vous avez un bon poste, un revenu qui progresse, un début de patrimoine… mais vous sentez que vous pourriez <strong>mieux faire</strong>.</p>
+        <p>Votre banquier vous parle produits. Votre assureur pousse ses solutions. Sur Internet, c'est la jungle. Avec l'inflation, la fiscalité, l'incertitude économique — vous savez qu'il faut <strong>agir maintenant</strong>.</p>
+        <p>Chez Peak Patrimoine, on ne parle pas produits. On parle de <strong>vos projets de vie</strong>. On part de vos objectifs pour bâtir une stratégie claire, alignée, personnalisée.</p>
+        <blockquote>"Pas besoin d'attendre d'avoir 200 000 € pour passer à l'action… Parce que la vraie liberté ne s'attend pas. Elle se construit."</blockquote>
+      </div>
+      <div class="vs-box">
+        <div class="vs-header"><span class="vh-bad">Approche classique</span><span class="vh-good">Peak Patrimoine</span></div>
+        <div class="vs-row"><div class="vs-bad">Votre banquier pousse ses produits</div><div class="vs-good">On part de vos objectifs</div></div>
+        <div class="vs-row"><div class="vs-bad">Honoraires à avancer</div><div class="vs-good">Zéro honoraire client</div></div>
+        <div class="vs-row"><div class="vs-bad">Offre limitée à une banque</div><div class="vs-good">+100 partenaires ouverts</div></div>
+        <div class="vs-row"><div class="vs-bad">Signature, puis silence</div><div class="vs-good">Suivi long terme actif</div></div>
+        <div class="vs-row"><div class="vs-bad">Réservé aux gros patrimoines</div><div class="vs-good">Accessible dès maintenant</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <span class="label">Nos engagements</span>
+    <h2 class="section-title">Une promesse qui<br>vous libère vraiment</h2>
+    <p class="lead">Cadre, dirigeant, indépendant ou profession libérale : notre approche s'adapte à votre réalité.</p>
+    <div class="promise-grid">
+      <div class="card"><div class="card-icon">🔓</div><h3>Un conseil accessible</h3><p>Aucune barrière à l'entrée. Pas besoin d'attendre "d'avoir assez" pour être bien conseillé. Ce qui compte, c'est votre volonté d'avancer.</p></div>
+      <div class="card"><div class="card-icon">💼</div><h3>Aucun honoraire à avancer</h3><p>Accompagnement rémunéré directement par nos partenaires sur les solutions mises en place. Sans frais cachés, sans surcoût pour vous.</p></div>
+      <div class="card"><div class="card-icon">🧭</div><h3>Approche 360° humaine</h3><p>Un conseiller partenaire unique qui vous connaît et vous accompagne pas à pas : constitution, développement, optimisation, transmission.</p></div>
+      <div class="card"><div class="card-icon">🏗️</div><h3>Architecture ouverte</h3><p>La gamme la plus large du marché : placements, immobilier, financement. Chaque solution est choisie pour vous, pas pour nous.</p></div>
+      <div class="card"><div class="card-icon">🤝</div><h3>La confiance au centre</h3><p>Suivi dans la durée, relation long terme, mises en relation naturelles. Pas de signature puis silence radio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container">
+    <span class="label">Notre méthode</span>
+    <h2 class="section-title">Une méthode claire,<br>pensée pour durer</h2>
+    <p class="lead">Quatre étapes structurées pour bâtir et faire grandir votre patrimoine dans le temps.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Audit patrimonial</h3><p>Analyse complète de votre situation : revenus, patrimoine, fiscalité, objectifs. Une photographie claire pour partir sur de bonnes bases.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Bilan &amp; priorisation</h3><p>On clarifie vos projets, envies et contraintes. On vous aide à hiérarchiser et poser les premières briques d'une stratégie cohérente.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Mise en place</h3><p>Sélection et activation des leviers les plus pertinents : placements, immobilier, financement, fiscalité, retraite, transmission.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Suivi long terme</h3><p>Votre stratégie n'est pas figée. On ajuste ensemble au fil des années selon vos évolutions personnelles, fiscales ou économiques.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="label">Ce que vous y gagnez</span>
+    <h2 class="section-title">Ce que change un vrai<br>conseiller patrimonial</h2>
+    <div class="benefits-grid">
+      <div class="benefit"><span class="benefit-icon">⏱</span><h3>Du temps</h3><p>Pour vous concentrer sur l'essentiel : votre vie, vos envies, vos proches.</p></div>
+      <div class="benefit"><span class="benefit-icon">🔍</span><h3>De la clarté</h3><p>Vous comprenez vos choix. Vous avancez sans flou ni stress inutile.</p></div>
+      <div class="benefit"><span class="benefit-icon">🛡</span><h3>De la sécurité</h3><p>Méthode structurée, partenaires fiables, expertise rigoureuse.</p></div>
+      <div class="benefit"><span class="benefit-icon">🧱</span><h3>Un cap solide</h3><p>Aligné avec vos ambitions, vos valeurs, votre rythme de vie.</p></div>
+      <div class="benefit"><span class="benefit-icon">☀️</span><h3>De la sérénité</h3><p>Votre stratégie est claire, suivie, ajustée dans le temps.</p></div>
+      <div class="benefit"><span class="benefit-icon">📈</span><h3>De la performance</h3><p>Les bons leviers, activés au bon moment, pour vos vrais objectifs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <span class="label">À propos</span>
+    <div class="about-layout">
+      <div class="about-img-wrap">
+        <img class="about-img" src="photo-alexandre.png" alt="Alexandre Dussourd, conseiller en gestion de patrimoine à Nice — Peak Patrimoine">
+      </div>
+      <div class="about-text">
+        <h2 class="about-name">Alexandre Dussourd</h2>
+        <span class="about-role">Conseiller en Gestion de Patrimoine · Nice</span>
+        <p>Ex-ingénieur reconverti en consultant patrimonial, Peak Patrimoine est né d'un constat simple : <em>"sans stratégie, ni suivi, il est difficile d'agir."</em></p>
+        <p>Pour y répondre, nous avons choisi de nous entourer des meilleurs : en rejoignant un réseau national de <strong>+900 consultants experts</strong>, un partenaire de référence reconnu pour sa solidité auprès des institutionnels, et l'accès à une offre en <strong>architecture ouverte</strong> composée de <strong>+100 partenaires de renom</strong>.</p>
+        <p>Le tout pour vous offrir un accompagnement exigeant, accessible et sans compromis sur la qualité.</p>
+        <div class="about-stats">
+          <div><span class="stat-num">+100</span><span class="stat-lbl">Partenaires</span></div>
+          <div><span class="stat-num">+900</span><span class="stat-lbl">Consultants réseau</span></div>
+          <div><span class="stat-num">360°</span><span class="stat-lbl">Approche globale</span></div>
+        </div>
+        <a class="linkedin-btn" href="https://www.linkedin.com/in/alexdussourd/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn — Alexandre Dussourd
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS CLIENTS -->
+<section>
+  <div class="container">
+    <span class="label">Ce qu'ils disent</span>
+    <h2 class="section-title">Ils nous font confiance</h2>
+    <p class="lead">6 clients ont partagé leur expérience sur Trustpilot et Google.</p>
+
+    <!-- Score global -->
+    <div class="reviews-score-row">
+      <div class="reviews-score-box">
+        <div class="reviews-logo-tp">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L14.09 8.26L20.6 8.27L15.45 12.14L17.55 18.4L12 14.54L6.45 18.4L8.55 12.14L3.4 8.27L9.91 8.26L12 2Z" fill="#00B67A"/></svg>
+          <span>Trustpilot</span>
+        </div>
+        <div class="reviews-stars">★★★★★</div>
+        <div class="reviews-score-num">5.0 <span>/5</span></div>
+        <a href="https://fr.trustpilot.com/review/peakpatrimoine.fr" target="_blank" rel="noopener" class="reviews-link">Voir tous les avis →</a>
+      </div>
+      <div class="reviews-score-box">
+        <div class="reviews-logo-g">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          <span>Google</span>
+        </div>
+        <div class="reviews-stars">★★★★★</div>
+        <div class="reviews-score-num">5.0 <span>/5</span></div>
+        <a href="https://maps.app.goo.gl/peakpatrimoine" target="_blank" rel="noopener" class="reviews-link">Voir sur Google Maps →</a>
+      </div>
+    </div>
+
+    <!-- Avis individuels -->
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"J'ai eu l'occasion de faire appel à Alexandre Dussourd de Peak Patrimoine pour un audit complet de ma situation (personnelle et professionnelle). Il a su me proposer plusieurs solutions d'investissement parfaitement adaptées à mes objectifs, avec une approche à la fois structurée et très pédagogique."</p>
+        <div class="review-author">
+          <div class="review-avatar">T</div>
+          <div>
+            <div class="review-name">Thomas</div>
+            <div class="review-source">Trustpilot · Vérifié</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"J'ai eu le contact d'Alexandre Dussourd grâce à mon frère, et je ne peux que le recommander. Il a su déconstruire toutes mes idées reçues sur l'investissement. J'ai compris qu'il est essentiel de commencer à investir le plus tôt possible, même avec de petites sommes."</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Mathieu</div>
+            <div class="review-source">Trustpilot · Vérifié</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Pédagogue, à l'écoute et réactif, Alexandre cherche avant tout à comprendre vos besoins. Très satisfait de l'aide d'Alexandre qui m'a permis de mettre en place plusieurs outils et de remettre tout à plat. Ce n'est que le début de notre collaboration."</p>
+        <div class="review-author">
+          <div class="review-avatar">L</div>
+          <div>
+            <div class="review-name">Laurent</div>
+            <div class="review-source">Trustpilot · Vérifié</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Alexandre a su nous conseiller en fonction de notre situation et de nos besoins. Grâce à lui nous avons réduit nos impôts et réalisé un complément pour notre retraite. N'hésitez pas, contactez le. Il est très professionnel."</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="review-name">Sophie &amp; Marc</div>
+            <div class="review-source">Google · Vérifié</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Merci beaucoup pour tes conseils et tes explications qui m'ont permis de comprendre comment placer au mieux mon patrimoine."</p>
+        <div class="review-author">
+          <div class="review-avatar">C</div>
+          <div>
+            <div class="review-name">Claire</div>
+            <div class="review-source">Google · Vérifié</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Alexandre sait vous écouter et vous proposer les bons placements pour des économies d'impôts et un complément de retraite."</p>
+        <div class="review-author">
+          <div class="review-avatar">P</div>
+          <div>
+            <div class="review-name">Pierre</div>
+            <div class="review-source">Google · Vérifié</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:40px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://fr.trustpilot.com/review/peakpatrimoine.fr" target="_blank" rel="noopener" class="btn btn-ambre">Laisser un avis Trustpilot →</a>
+      <a href="https://maps.app.goo.gl/peakpatrimoine" target="_blank" rel="noopener" class="btn btn-dark">Voir sur Google Maps →</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Prêt à passer à l'action ?</h2>
+    <p>Un premier rendez-vous sans engagement, sans honoraires.<br>On part de vous, pas de nos produits.</p>
+    <a class="btn btn-dark" href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre rendez-vous gratuitement →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="footer-logo" href="/">Peak<span>Patrimoine</span></a>
+        <p>Conseiller en gestion de patrimoine à Nice.<br>Stratégie patrimoniale sur-mesure pour cadres,<br>dirigeants et indépendants sur la Côte d'Azur.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="/">Accueil</a>
+        <a href="/expertise.html">Expertise</a>
+        <a href="/mentions-legales.html">Mentions légales</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+33668681188">06 68 68 11 88</a>
+        <a href="mailto:a.dussourd@peakpatrimoine.fr">a.dussourd@peakpatrimoine.fr</a>
+        <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre rendez-vous</a>
+        <a href="https://www.linkedin.com/in/alexdussourd/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Peak Patrimoine — Alexandre Dussourd</p>
+      <p>ORIAS n° 22002240 — Activité réglementée par l'ACPR et l'AMF</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Chat Elfsight -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-391c3857-384e-46b6-a1a9-1c270654a9b5" data-elfsight-app-lazy></div>
+
+</body>
+</html>

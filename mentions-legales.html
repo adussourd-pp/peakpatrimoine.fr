@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales — Peak Patrimoine · CGP Nice</title>
+  <meta name="description" content="Mentions légales et informations réglementaires de Peak Patrimoine — Alexandre Dussourd, conseiller en gestion de patrimoine à Nice. ORIAS n°22002240.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.peakpatrimoine.fr/mentions-legales.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero{background:var(--noir);padding:72px 0 64px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border:1px solid rgba(240,167,56,0.1);border-radius:50%;pointer-events:none;}
+    .hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--ambre-m);margin-bottom:18px;display:block;}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);font-weight:600;color:var(--blanc);line-height:1.2;margin-bottom:12px;}
+    .hero-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.7;}
+
+    .ml-body{padding:72px 0 96px;}
+    .ml-grid{display:grid;grid-template-columns:240px 1fr;gap:56px;align-items:flex-start;}
+
+    .ml-sidebar{position:sticky;top:84px;}
+    .ml-sidebar-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;color:var(--gris);margin-bottom:16px;}
+    .ml-sidebar a{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gris);text-decoration:none;padding:8px 12px;border-radius:6px;margin-bottom:4px;transition:all 0.2s;border-left:2px solid transparent;}
+    .ml-sidebar a:hover{color:var(--ambre);background:var(--ambre-l);border-left-color:var(--ambre);}
+    .ml-sidebar a::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--bord);flex-shrink:0;transition:background 0.2s;}
+    .ml-sidebar a:hover::before{background:var(--ambre);}
+
+    .ml-contact-card{background:var(--ambre-l);border:1px solid var(--ambre-m);border-radius:12px;padding:20px;margin-bottom:24px;}
+    .ml-contact-card .name{font-weight:600;font-size:15px;color:var(--noir);margin-bottom:8px;}
+    .ml-contact-card .line{font-size:13px;color:var(--gris-f);margin:3px 0;line-height:1.5;}
+    .ml-contact-card a{color:var(--ambre-d);text-decoration:none;}
+    .ml-orias{font-size:12px;font-weight:600;color:var(--ambre-d);background:var(--ambre-l);border:1px solid var(--ambre-m);padding:6px 12px;border-radius:20px;display:inline-block;margin-top:8px;}
+
+    .ml-content{}
+    .ml-section{margin-bottom:52px;scroll-margin-top:80px;}
+    .ml-section-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid var(--ambre-m);}
+    .ml-section-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--ambre-m);line-height:1;min-width:36px;}
+    .ml-section-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--noir);line-height:1.2;}
+    .ml-badge{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--ambre-d);background:var(--ambre-l);border:1px solid var(--ambre-m);padding:3px 10px;border-radius:20px;margin-left:auto;white-space:nowrap;}
+
+    .ml-card{background:var(--blanc);border:1px solid var(--bord);border-radius:12px;padding:20px 22px;margin-bottom:12px;}
+    .ml-card.accent{border-left:3px solid var(--ambre);}
+    .ml-card h4{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--gris);margin-bottom:10px;}
+    .ml-card p{font-size:14px;font-weight:300;color:#333;line-height:1.75;}
+    .ml-card p+p{margin-top:8px;}
+    .ml-card strong{font-weight:500;color:var(--noir);}
+
+    .ml-2col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+    .ml-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;}
+    .ml-stat{background:var(--gris-l);border-radius:8px;padding:14px 16px;}
+    .ml-stat .slabel{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--gris);margin-bottom:4px;}
+    .ml-stat .sval{font-size:16px;font-weight:600;color:var(--noir);}
+
+    .ml-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;}
+    .ml-tag{font-size:12px;padding:4px 12px;background:var(--gris-l);border:1px solid var(--bord);border-radius:20px;color:#333;}
+
+    .ml-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px;}
+    .ml-table th{background:var(--gris-l);padding:10px 14px;text-align:left;font-weight:500;color:var(--gris);border-bottom:1px solid var(--bord);font-size:12px;}
+    .ml-table td{padding:10px 14px;border-bottom:1px solid var(--bord);color:var(--noir);font-weight:300;}
+    .ml-table td.amount{font-weight:600;color:var(--ambre-d);}
+
+    .ml-med{border:1px solid var(--bord);border-radius:10px;padding:16px 18px;margin-bottom:10px;}
+    .ml-med .mtype{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--ambre);margin-bottom:4px;}
+    .ml-med .mname{font-size:15px;font-weight:500;color:var(--noir);margin-bottom:4px;}
+    .ml-med .mdetail{font-size:13px;font-weight:300;color:var(--gris);line-height:1.5;}
+    .ml-med a{color:var(--ambre-d);text-decoration:none;font-size:12px;display:inline-block;margin-top:6px;font-weight:500;}
+
+    @media(max-width:780px){
+      .ml-grid{grid-template-columns:1fr;}
+      .ml-sidebar{position:static;display:none;}
+      .ml-2col{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">Peak<span>Patrimoine</span></a>
+    <div class="nav-links">
+      <a href="/">Accueil</a>
+      <a href="/expertise.html">Expertise</a>
+      <a href="/mentions-legales.html" class="active">Mentions légales</a>
+      <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener" class="nav-cta">Prendre RDV →</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <span class="hero-eyebrow">Peak Patrimoine · Nice</span>
+    <h1>Mentions légales &amp;<br>informations réglementaires</h1>
+    <p class="hero-sub">Document établi conformément au Code monétaire et financier, au Code des assurances et à la réglementation AMF.</p>
+  </div>
+</header>
+
+<div class="ml-body">
+  <div class="container">
+    <div class="ml-grid">
+
+      <!-- SIDEBAR -->
+      <aside class="ml-sidebar">
+        <div class="ml-contact-card">
+          <div class="name">Alexandre Dussourd</div>
+          <div class="line">3 Av. de la République, 06300 Nice</div>
+          <div class="line"><a href="tel:+33668681188">06 68 68 11 88</a></div>
+          <div class="line"><a href="mailto:a.dussourd@peakpatrimoine.fr">a.dussourd@peakpatrimoine.fr</a></div>
+          <div><a class="ml-orias" href="https://www.orias.fr" target="_blank">ORIAS n° 22002240</a></div>
+        </div>
+        <div class="ml-sidebar-title">Sommaire</div>
+        <a href="#immo">Immobilier</a>
+        <a href="#financement">Financement</a>
+        <a href="#assurance">Assurance</a>
+        <a href="#instruments">Instruments financiers</a>
+        <a href="#rcp">Assurance RCP</a>
+        <a href="#reclamations">Réclamations</a>
+        <a href="#mediateurs">Médiateurs</a>
+      </aside>
+
+      <!-- CONTENU -->
+      <div class="ml-content">
+
+        <div class="ml-section" id="immo">
+          <div class="ml-section-header">
+            <span class="ml-section-num">01</span>
+            <h2 class="ml-section-title">Activité immobilière</h2>
+            <span class="ml-badge">Transaction</span>
+          </div>
+          <div class="ml-card accent">
+            <h4>Habilitation agent commercial</h4>
+            <p>Alexandre Dussourd intervient en qualité d'<strong>agent commercial</strong> mandaté par <strong>Stellium Immobilier SAS</strong> — Capital social 150 000 € — RCS Toulouse 384 850 095 — 11 Avenue Parmentier, CS 70117, 31201 Toulouse Cedex 2.</p>
+            <p>Carte professionnelle n° <strong>CPI 3101 2015 000 001 813</strong> « Transaction sur immeubles et fonds de commerce » sans détention de fonds, délivrée par la CCI de Toulouse. Attestation d'habilitation conforme au décret n° 72-678 du 20 juillet 1972. Activité contrôlable par la DGCCRF.</p>
+          </div>
+        </div>
+
+        <div class="ml-section" id="financement">
+          <div class="ml-section-header">
+            <span class="ml-section-num">02</span>
+            <h2 class="ml-section-title">Financement</h2>
+            <span class="ml-badge">IOBSP</span>
+          </div>
+          <div class="ml-card accent">
+            <h4>Mandataire IOBSP</h4>
+            <p>Alexandre Dussourd agit en tant que mandataire d'intermédiaire en opérations de banque et en services de paiement, ainsi que comme démarcheur bancaire et financier pour le compte de <strong>Stellium Financement</strong>.</p>
+            <p>Stellium Financement — Courtier en OB et SP — Capital 100 000 € — RCS Toulouse 842 612 707 — 11 avenue Parmentier, CS 70 117, 31 201 Toulouse cedex 2 — ORIAS n° <strong>18 006 415</strong>. Adhérent <strong>ANACOFI COURTAGE</strong>. Activité contrôlable par l'ACPR — 4 place de Budapest, 75 436 Paris cedex 9.</p>
+          </div>
+          <div class="ml-card">
+            <h4>Rémunération &amp; conflits d'intérêts</h4>
+            <p>Stellium Financement peut percevoir une commission de la part de ses partenaires bancaires, ainsi que des honoraires de courtage. Le cas échéant, le mandataire peut percevoir une quote-part des honoraires rétrocédés.</p>
+            <p>Stellium Financement a enregistré au cours du dernier exercice <strong>plus d'un tiers de son chiffre d'affaires avec le partenaire CFCAL</strong>.</p>
+          </div>
+          <div class="ml-card">
+            <h4>Principaux partenaires bancaires</h4>
+            <div class="ml-tags">
+              <span class="ml-tag">BNP</span>
+              <span class="ml-tag">CFCAL</span>
+              <span class="ml-tag">Caisse d'Épargne</span>
+              <span class="ml-tag">LCL</span>
+              <span class="ml-tag">SOFIAP</span>
+            </div>
+            <p style="margin-top:12px;font-size:12px;color:var(--gris);">Liste exhaustive disponible sur <a href="https://www.stellium.fr/partenaires-bancaires-de-stellium-financement/" target="_blank" style="color:var(--ambre-d);">stellium.fr</a></p>
+          </div>
+        </div>
+
+        <div class="ml-section" id="assurance">
+          <div class="ml-section-header">
+            <span class="ml-section-num">03</span>
+            <h2 class="ml-section-title">Assurance</h2>
+            <span class="ml-badge">IAS</span>
+          </div>
+          <div class="ml-card accent">
+            <h4>Mandataire d'intermédiaire d'assurance</h4>
+            <p>Alexandre Dussourd agit en qualité de mandataire d'intermédiaire d'assurance pour le compte de <strong>Stellium Courtage</strong> — Courtage d'assurance de type B — Capital 350 000 € — RCS Toulouse 421 956 509 — ORIAS n° <strong>07 008 919</strong> — Adhérent ANACOFI COURTAGE.</p>
+            <p>Activité contrôlable par l'ACPR. Garantie financière et assurance de responsabilité civile professionnelle conformes au Code des assurances. Stellium Courtage exerce son activité conformément à l'article L.521-2, II, 1° b) du Code des assurances.</p>
+          </div>
+          <div class="ml-card">
+            <h4>Nature du conseil</h4>
+            <p>Stellium Courtage délivre un conseil de niveau 1 basé sur les connaissances, l'expérience financière, la situation financière et les objectifs de souscription du client. La société <strong>ne fournit pas</strong> de service de recommandation personnalisé au sens de l'article L 522-5 II du Code des assurances. Aucune participation croisée n'existe entre Stellium Courtage et ses assureurs partenaires.</p>
+          </div>
+          <div class="ml-card">
+            <h4>Partenaires assureurs référencés</h4>
+            <div class="ml-tags">
+              <span class="ml-tag">Suravenir (Vie Plus)</span>
+              <span class="ml-tag">APICIL Assurances</span>
+              <span class="ml-tag">APICIL LIFE</span>
+              <span class="ml-tag">APICIL Épargne Retraite</span>
+              <span class="ml-tag">ODDO BHF — Génération Vie, Generali Vie, Oradea</span>
+              <span class="ml-tag">Eres — Swiss Life, Spirica</span>
+              <span class="ml-tag">Digital Insure — Groupama, AG2R, Miltis</span>
+              <span class="ml-tag">April Santé Prévoyance — Prévoir Vie</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ml-section" id="instruments">
+          <div class="ml-section-header">
+            <span class="ml-section-num">04</span>
+            <h2 class="ml-section-title">Instruments financiers</h2>
+            <span class="ml-badge">CIF / Agent lié</span>
+          </div>
+          <div class="ml-card accent">
+            <h4>Statut agent lié</h4>
+            <p>Alexandre Dussourd agit en qualité d'<strong>agent lié</strong> et de démarcheur bancaire et financier pour le compte de <strong>Stellium Invest</strong> — Capital 950 000 € — RCS Toulouse 538 449 612 — Entreprise d'investissement agréée par l'ACPR sous le n° <strong>10983 N</strong>.</p>
+            <p>Le service de conseil en investissement est délivré à titre <strong>non indépendant</strong>. Les commissions de distribution sont prélevées sur les frais du produit et une quote-part est rétrocédée à l'agent lié. Conformément à l'article 325-5 du Règlement général de l'AMF.</p>
+          </div>
+          <div class="ml-card">
+            <h4>Finance durable — ESG / ISR</h4>
+            <p>Des instruments financiers prenant en compte les facteurs de durabilité (ESG, ISR, lutte contre le changement climatique) peuvent être proposés, conformément à la politique de gouvernance produits de Stellium Invest.</p>
+          </div>
+          <div class="ml-card">
+            <h4>Sociétés de gestion référencées</h4>
+            <div class="ml-tags">
+              <span class="ml-tag">Advenis REIM</span><span class="ml-tag">Alderan</span><span class="ml-tag">Altarea RIM</span><span class="ml-tag">Arkea REIM</span><span class="ml-tag">Atland Voisin</span><span class="ml-tag">Atream</span><span class="ml-tag">Corum l'Épargne</span><span class="ml-tag">Eiffel Investment Group</span><span class="ml-tag">Elevation Capital</span><span class="ml-tag">La Française AM</span><span class="ml-tag">Mata Capital IM</span><span class="ml-tag">Nextstage AM</span><span class="ml-tag">Norma Capital</span><span class="ml-tag">Oddo BHF &amp; GBAM</span><span class="ml-tag">Odyssée Venture</span><span class="ml-tag">Périal AM</span><span class="ml-tag">Urban Premium</span><span class="ml-tag">Sofidy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ml-section" id="rcp">
+          <div class="ml-section-header">
+            <span class="ml-section-num">05</span>
+            <h2 class="ml-section-title">Assurance RCP</h2>
+          </div>
+          <div class="ml-card accent">
+            <h4>Assureur</h4>
+            <p><strong>Zurich Insurance PLC</strong> — 112 avenue de Wagram, 75017 Paris</p>
+          </div>
+          <table class="ml-table">
+            <thead><tr><th>Activité</th><th>Montant garanti / an</th></tr></thead>
+            <tbody>
+              <tr><td>Transactions immobilières (IMMO)</td><td class="amount">2 000 000 €</td></tr>
+              <tr><td>Opérations de banque (IOBSP)</td><td class="amount">2 000 000 €</td></tr>
+              <tr><td>Intermédiaire d'assurance (IAS)</td><td class="amount">2 000 000 €</td></tr>
+              <tr><td>Conseil en investissement (CIF)</td><td style="color:var(--gris);">Non applicable</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="ml-section" id="reclamations">
+          <div class="ml-section-header">
+            <span class="ml-section-num">06</span>
+            <h2 class="ml-section-title">Traitement des réclamations</h2>
+          </div>
+          <div class="ml-2col">
+            <div class="ml-card">
+              <h4>Votre consultant</h4>
+              <p>Adressez votre réclamation par courrier ou e-mail à Alexandre Dussourd aux coordonnées indiquées en en-tête.</p>
+            </div>
+            <div class="ml-card">
+              <h4>Stellium (selon produit)</h4>
+              <p>Par e-mail : <a href="mailto:reclamations@stellium.fr" style="color:var(--ambre-d);">reclamations@stellium.fr</a><br>Par courrier : Direction Générale, 11 avenue Parmentier, 31 200 Toulouse.</p>
+            </div>
+          </div>
+          <div class="ml-stats">
+            <div class="ml-stat"><div class="slabel">Accusé de réception</div><div class="sval">≤ 10 jours ouvrables</div></div>
+            <div class="ml-stat"><div class="slabel">Réponse définitive</div><div class="sval">≤ 2 mois</div></div>
+          </div>
+        </div>
+
+        <div class="ml-section" id="mediateurs">
+          <div class="ml-section-header">
+            <span class="ml-section-num">07</span>
+            <h2 class="ml-section-title">Médiateurs compétents</h2>
+          </div>
+          <div class="ml-med">
+            <div class="mtype">IOBSP &amp; Immobilier</div>
+            <div class="mname">AME Conso</div>
+            <div class="mdetail">11 place Dauphine, 75001 Paris</div>
+            <a href="https://www.mediationconso-ame.com" target="_blank">www.mediationconso-ame.com →</a>
+          </div>
+          <div class="ml-med">
+            <div class="mtype">Assurance</div>
+            <div class="mname">AME Conso</div>
+            <div class="mdetail">11 place Dauphine, 75001 Paris</div>
+            <a href="https://www.mediationconso-ame.com" target="_blank">www.mediationconso-ame.com →</a>
+          </div>
+          <div class="ml-med">
+            <div class="mtype">Instruments financiers — AMF</div>
+            <div class="mname">M. Rémi Bouchez — Médiateur de l'AMF</div>
+            <div class="mdetail">17 place de la Bourse, 75082 Paris cedex 02 — Autorité des Marchés Financiers</div>
+            <a href="https://www.amf-france.org/fr/le-mediateur-de-lamf/votre-dossier-de-mediation/vous-voulez-deposer-une-demande-de-mediation" target="_blank">Déposer une demande de médiation AMF →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="footer-logo" href="/">Peak<span>Patrimoine</span></a>
+        <p>Conseiller en gestion de patrimoine à Nice.<br>Stratégie patrimoniale sur-mesure pour cadres,<br>dirigeants et indépendants sur la Côte d'Azur.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="/">Accueil</a>
+        <a href="/expertise.html">Expertise</a>
+        <a href="/mentions-legales.html">Mentions légales</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+33668681188">06 68 68 11 88</a>
+        <a href="mailto:a.dussourd@peakpatrimoine.fr">a.dussourd@peakpatrimoine.fr</a>
+        <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre rendez-vous</a>
+        <a href="https://www.linkedin.com/in/alexdussourd/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Peak Patrimoine — Alexandre Dussourd</p>
+      <p>ORIAS n° 22002240 — Activité réglementée par l'ACPR et l'AMF</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Chat Elfsight -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-391c3857-384e-46b6-a1a9-1c270654a9b5" data-elfsight-app-lazy></div>
+
+</body>
+</html>
