@@ -35,7 +35,21 @@
     .hero-badge strong{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.85);margin-bottom:3px;}
     .hero-badge span{font-size:12px;color:rgba(255,255,255,0.3);}
 
-    .problem-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+    .problem-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:flex-start;}
+
+    /* ── COMPARATIF ── */
+    .comp-table{width:100%;border-radius:14px;overflow:hidden;border:1px solid var(--bord);}
+    .comp-head{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;background:var(--noir);padding:0;}
+    .comp-criteria{font-size:13px;font-weight:400;color:#333;padding:14px 16px;border-bottom:1px solid var(--bord);display:flex;align-items:center;background:var(--blanc);}
+    .comp-col-head{font-size:11px;font-weight:600;text-align:center;padding:14px 8px;color:rgba(255,255,255,0.5);letter-spacing:0.04em;border-left:1px solid rgba(255,255,255,0.06);line-height:1.4;}
+    .comp-col-head.peak{background:var(--ambre);color:var(--noir);font-size:12px;font-weight:700;letter-spacing:0.02em;}
+    .comp-row{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;background:var(--blanc);}
+    .comp-row:nth-child(even){background:var(--gris-l);}
+    .comp-row:last-child .comp-criteria,.comp-row:last-child .comp-cell{border-bottom:none;}
+    .comp-cell{font-size:16px;font-weight:700;text-align:center;padding:14px 8px;border-left:1px solid var(--bord);border-bottom:1px solid var(--bord);display:flex;align-items:center;justify-content:center;}
+    .comp-cell.peak{background:rgba(240,167,56,0.08);color:var(--ambre);border-left:1px solid rgba(240,167,56,0.2);}
+    .comp-cell.yes{color:#2a2a2a;}
+    .comp-cell.no{color:#ccc;}
     .problem-text p{font-size:15.5px;font-weight:300;color:#3a3a3a;line-height:1.88;margin-bottom:18px;}
     .problem-text p strong{font-weight:500;color:var(--noir);}
     blockquote{margin-top:32px;padding:22px 26px;border-left:3px solid var(--ambre);background:var(--ambre-l);border-radius:0 10px 10px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:16px;color:#7A4E0A;line-height:1.65;}
@@ -127,7 +141,8 @@
     .recruit-offer-item p{font-size:13px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.6;}
     @media(max-width:860px){.recruit-grid{grid-template-columns:1fr;gap:36px;}}
     @media(max-width:960px){
-      .problem-layout{grid-template-columns:1fr;gap:48px;}
+      .problem-layout{grid-template-columns:1fr;gap:40px;}
+      .comp-head,.comp-row{grid-template-columns:1.4fr 0.8fr 0.8fr 0.8fr 0.8fr;}
       .promise-grid{grid-template-columns:1fr 1fr;}
       .promise-grid .card:last-child{grid-column:span 1;}
       .steps{grid-template-columns:1fr 1fr;gap:32px;}
@@ -153,7 +168,6 @@
     <div class="nav-links">
       <a href="/" class="active">Accueil</a>
       <a href="/expertise.html">Expertise</a>
-      <a href="/rejoindre.html">Rejoindre l'équipe</a>
       <a href="/mentions-legales.html">Mentions légales</a>
       <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener" class="nav-cta">Prendre contact →</a>
     </div>
@@ -189,13 +203,20 @@
         <p>Chez Peak Patrimoine, on ne parle pas produits. On parle de <strong>vos projets de vie</strong>. On part de vos objectifs pour bâtir une stratégie claire, alignée, personnalisée.</p>
         <blockquote>"Pas besoin d'attendre d'avoir 200 000 € pour passer à l'action… Parce que la vraie liberté ne s'attend pas. Elle se construit."</blockquote>
       </div>
-      <div class="vs-box">
-        <div class="vs-header"><span class="vh-bad">Approche classique</span><span class="vh-good">Peak Patrimoine</span></div>
-        <div class="vs-row"><div class="vs-bad">Votre banquier pousse ses produits</div><div class="vs-good">On part de vos objectifs</div></div>
-        <div class="vs-row"><div class="vs-bad">Honoraires à avancer</div><div class="vs-good">Zéro honoraire client</div></div>
-        <div class="vs-row"><div class="vs-bad">Offre limitée à une banque</div><div class="vs-good">+100 partenaires ouverts</div></div>
-        <div class="vs-row"><div class="vs-bad">Signature, puis silence</div><div class="vs-good">Suivi long terme</div></div>
-        <div class="vs-row"><div class="vs-bad">Réservé aux gros patrimoines</div><div class="vs-good">Accessible dès maintenant</div></div>
+      <div class="comp-table">
+        <div class="comp-head">
+          <div class="comp-criteria"></div>
+          <div class="comp-col-head peak">Avec moi</div>
+          <div class="comp-col-head">Banque Privée<br>CGPi</div>
+          <div class="comp-col-head">Fintech<br>en ligne</div>
+          <div class="comp-col-head">Banque</div>
+        </div>
+        <div class="comp-row"><div class="comp-criteria">Investissement accessible dès 50€/mois</div><div class="comp-cell peak">✓</div><div class="comp-cell no">✕</div><div class="comp-cell yes">✓</div><div class="comp-cell yes">✓</div></div>
+        <div class="comp-row"><div class="comp-criteria">Opportunités haut de gamme</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div></div>
+        <div class="comp-row"><div class="comp-criteria">Stratégie patrimoniale 360°</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div><div class="comp-cell no">✕</div></div>
+        <div class="comp-row"><div class="comp-criteria">Suivi et accompagnement dans la durée</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div><div class="comp-cell no">✕</div></div>
+        <div class="comp-row"><div class="comp-criteria">Un interlocuteur unique</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div><div class="comp-cell yes">✓</div></div>
+        <div class="comp-row"><div class="comp-criteria">Pas d'honoraires fixes</div><div class="comp-cell peak">✓</div><div class="comp-cell no">✕</div><div class="comp-cell yes">✓</div><div class="comp-cell yes">✓</div></div>
       </div>
     </div>
   </div>
@@ -207,11 +228,11 @@
     <h2 class="section-title">Une promesse qui<br>vous libère vraiment</h2>
     <p class="lead">Cadre, dirigeant, indépendant ou profession libérale : notre approche s'adapte à votre réalité.</p>
     <div class="promise-grid">
-      <div class="card"><h3>Un conseil accessible</h3><p>Aucune barrière à l'entrée. Pas besoin d'attendre "d'avoir assez" pour être bien conseillé. Ce qui compte, c'est votre volonté d'avancer.</p></div>
-      <div class="card"><h3>Aucun honoraire à avancer</h3><p>Accompagnement rémunéré directement par nos partenaires sur les solutions mises en place. Sans frais cachés, sans surcoût pour vous.</p></div>
-      <div class="card"><h3>Approche 360° humaine</h3><p>Un conseiller partenaire unique qui vous connaît et vous accompagne pas à pas : constitution, développement, optimisation, transmission.</p></div>
-      <div class="card"><h3>Architecture ouverte</h3><p>La gamme la plus large du marché : placements, immobilier, financement. Chaque solution est choisie pour vous, pas pour nous.</p></div>
-      <div class="card"><h3>La confiance au centre de nos échanges</h3><p>Suivi dans la durée, relation long terme, mises en relation naturelles. Pas de signature puis silence radio.</p></div>
+      <div class="card"><div class="card-icon">🔓</div><h3>Un conseil accessible</h3><p>Aucune barrière à l'entrée. Pas besoin d'attendre "d'avoir assez" pour être bien conseillé. Ce qui compte, c'est votre volonté d'avancer.</p></div>
+      <div class="card"><div class="card-icon">💼</div><h3>Aucun honoraire à avancer</h3><p>Accompagnement rémunéré directement par nos partenaires sur les solutions mises en place. Sans frais cachés, sans surcoût pour vous.</p></div>
+      <div class="card"><div class="card-icon">🧭</div><h3>Approche 360° humaine</h3><p>Un conseiller partenaire unique qui vous connaît et vous accompagne pas à pas : constitution, développement, optimisation, transmission.</p></div>
+      <div class="card"><div class="card-icon">🏗️</div><h3>Architecture ouverte</h3><p>La gamme la plus large du marché : placements, immobilier, financement. Chaque solution est choisie pour vous, pas pour nous.</p></div>
+      <div class="card"><div class="card-icon">🤝</div><h3>La confiance au centre de nos échanges</h3><p>Suivi dans la durée, relation long terme, mises en relation naturelles. Pas de signature puis silence radio.</p></div>
     </div>
   </div>
 </section>
@@ -235,12 +256,12 @@
     <span class="label">Ce que vous y gagnez</span>
     <h2 class="section-title">Plus qu'un simple conseiller,<br>un véritable partenaire dans vos projets de vie</h2>
     <div class="benefits-grid">
-      <div class="benefit"><h3>Du temps</h3><p>Pour vous concentrer sur l'essentiel : votre vie, vos envies, vos proches.</p></div>
-      <div class="benefit"><h3>De la clarté</h3><p>Vous comprenez vos choix. Vous avancez sans flou ni stress inutile.</p></div>
-      <div class="benefit"><h3>De la sécurité</h3><p>Méthode structurée, partenaires fiables, expertise rigoureuse.</p></div>
-      <div class="benefit"><h3>Un cap solide</h3><p>Aligné avec vos ambitions, vos valeurs, votre rythme de vie.</p></div>
-      <div class="benefit"><h3>De la sérénité</h3><p>Votre stratégie est claire, suivie, ajustée dans le temps.</p></div>
-      <div class="benefit"><h3>De la performance</h3><p>Les bons leviers, activés au bon moment, pour vos vrais objectifs.</p></div>
+      <div class="benefit"><span class="benefit-icon">⏱</span><h3>Du temps</h3><p>Pour vous concentrer sur l'essentiel : votre vie, vos envies, vos proches.</p></div>
+      <div class="benefit"><span class="benefit-icon">🔍</span><h3>De la clarté</h3><p>Vous comprenez vos choix. Vous avancez sans flou ni stress inutile.</p></div>
+      <div class="benefit"><span class="benefit-icon">🛡</span><h3>De la sécurité</h3><p>Méthode structurée, partenaires fiables, expertise rigoureuse.</p></div>
+      <div class="benefit"><span class="benefit-icon">🧱</span><h3>Un cap solide</h3><p>Aligné avec vos ambitions, vos valeurs, votre rythme de vie.</p></div>
+      <div class="benefit"><span class="benefit-icon">☀️</span><h3>De la sérénité</h3><p>Votre stratégie est claire, suivie, ajustée dans le temps.</p></div>
+      <div class="benefit"><span class="benefit-icon">📈</span><h3>De la performance</h3><p>Les bons leviers, activés au bon moment, pour vos vrais objectifs.</p></div>
     </div>
   </div>
 </section>
@@ -451,7 +472,6 @@
         <h4>Navigation</h4>
         <a href="/">Accueil</a>
         <a href="/expertise.html">Expertise</a>
-      <a href="/rejoindre.html">Rejoindre l'équipe</a>
         <a href="/mentions-legales.html">Mentions légales</a>
       </div>
       <div class="footer-col">
