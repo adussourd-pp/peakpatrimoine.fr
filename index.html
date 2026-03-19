@@ -89,6 +89,10 @@
     .about-img-wrap::before{content:'';position:absolute;top:-16px;left:-16px;right:16px;bottom:16px;border:1.5px solid var(--ambre);border-radius:18px;z-index:0;opacity:0.5;}
     .about-img-wrap::after{content:'';position:absolute;top:-8px;left:-8px;right:8px;bottom:8px;border:1px solid var(--ambre-m);border-radius:16px;z-index:0;}
     .about-img{width:100%;border-radius:14px;display:block;position:relative;z-index:1;aspect-ratio:1/1;object-fit:cover;object-position:center top;}
+    @media(max-width:640px){
+      .about-img-wrap::before,.about-img-wrap::after{display:none;}
+      .about-img-wrap{padding:0;}
+    }
     .about-name{font-family:'Playfair Display',serif;font-size:34px;font-weight:600;color:var(--noir);margin-bottom:6px;}
     .about-role{font-size:11px;font-weight:600;color:var(--ambre);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:24px;display:block;}
     .about-text p{font-size:15px;font-weight:300;color:#444;line-height:1.88;margin-bottom:16px;}
@@ -182,7 +186,6 @@
       .hero-badge span{font-size:11px;}
 
       /* Nav mobile */
-      .nav-links a:not(.nav-cta){display:none;}
       .nav-cta{padding:7px 14px!important;font-size:13px!important;}
 
       /* Comparatif mobile : scroll horizontal */
