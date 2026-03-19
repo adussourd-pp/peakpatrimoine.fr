@@ -185,10 +185,13 @@
       .nav-links a:not(.nav-cta){display:none;}
       .nav-cta{padding:7px 14px!important;font-size:13px!important;}
 
-      /* Comparatif mobile : masquer les 2 dernières colonnes */
-      .comp-head,.comp-row{grid-template-columns:1.8fr 0.9fr 0.9fr;}
-      .comp-col-head:nth-child(4),.comp-col-head:nth-child(5),
-      .comp-cell:nth-child(4),.comp-cell:nth-child(5){display:none;}
+      /* Comparatif mobile : scroll horizontal */
+      .comp-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -18px;padding:0 18px;}
+      .comp-table{min-width:520px;}
+      .comp-head,.comp-row{grid-template-columns:1.6fr 0.85fr 0.85fr 0.85fr 0.85fr;}
+      .comp-criteria{font-size:12px;padding:12px 10px;}
+      .comp-col-head{font-size:10px;padding:12px 6px;}
+      .comp-cell{font-size:14px;padding:12px 6px;}
 
       /* Layout général */
       section{padding:56px 0;}
@@ -225,9 +228,6 @@
     @media(max-width:380px){
       .benefits-grid{grid-template-columns:1fr;}
       .hero h1{font-size:30px;}
-      .comp-head,.comp-row{grid-template-columns:1.6fr 1fr;}
-      .comp-col-head:nth-child(3),.comp-col-head:nth-child(4),.comp-col-head:nth-child(5),
-      .comp-cell:nth-child(3),.comp-cell:nth-child(4),.comp-cell:nth-child(5){display:none;}
     }
   </style>
 </head>
@@ -278,20 +278,22 @@
         <p>Chez Peak Patrimoine, on ne parle pas produits. On parle de <strong>vos projets de vie</strong>. On part de vos objectifs pour bâtir une stratégie claire, alignée, personnalisée.</p>
         <blockquote>"Pas besoin d'attendre d'avoir 200 000 € pour passer à l'action… Parce que la vraie liberté ne s'attend pas. Elle se construit."</blockquote>
       </div>
-      <div class="comp-table">
-        <div class="comp-head">
-          <div class="comp-criteria"></div>
-          <div class="comp-col-head peak">Peak Patrimoine</div>
-          <div class="comp-col-head">Banque Privée<br>CGPi</div>
-          <div class="comp-col-head">Fintech<br>en ligne</div>
-          <div class="comp-col-head">Banque</div>
+      <div class="comp-table-wrap">
+        <div class="comp-table">
+          <div class="comp-head">
+            <div class="comp-criteria"></div>
+            <div class="comp-col-head peak">Peak Patrimoine</div>
+            <div class="comp-col-head">Banque Privée<br>CGPi</div>
+            <div class="comp-col-head">Fintech<br>en ligne</div>
+            <div class="comp-col-head">Banque</div>
+          </div>
+          <div class="comp-row"><div class="comp-criteria">Investissement accessible dès 50€/mois</div><div class="comp-cell peak">✓</div><div class="comp-cell no">✕</div><div class="comp-cell yes">✓</div><div class="comp-cell yes">✓</div></div>
+          <div class="comp-row"><div class="comp-criteria">Opportunités haut de gamme</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div></div>
+          <div class="comp-row"><div class="comp-criteria">Stratégie patrimoniale 360°</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div><div class="comp-cell no">✕</div></div>
+          <div class="comp-row"><div class="comp-criteria">Suivi et accompagnement dans la durée</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div><div class="comp-cell no">✕</div></div>
+          <div class="comp-row"><div class="comp-criteria">Un interlocuteur unique</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div><div class="comp-cell yes">✓</div></div>
+          <div class="comp-row"><div class="comp-criteria">Pas d'honoraires fixes</div><div class="comp-cell peak">✓</div><div class="comp-cell no">✕</div><div class="comp-cell yes">✓</div><div class="comp-cell yes">✓</div></div>
         </div>
-        <div class="comp-row"><div class="comp-criteria">Investissement accessible dès 50€/mois</div><div class="comp-cell peak">✓</div><div class="comp-cell no">✕</div><div class="comp-cell yes">✓</div><div class="comp-cell yes">✓</div></div>
-        <div class="comp-row"><div class="comp-criteria">Opportunités haut de gamme</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div></div>
-        <div class="comp-row"><div class="comp-criteria">Stratégie patrimoniale 360°</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div><div class="comp-cell no">✕</div></div>
-        <div class="comp-row"><div class="comp-criteria">Suivi et accompagnement dans la durée</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div><div class="comp-cell no">✕</div></div>
-        <div class="comp-row"><div class="comp-criteria">Un interlocuteur unique</div><div class="comp-cell peak">✓</div><div class="comp-cell yes">✓</div><div class="comp-cell no">✕</div><div class="comp-cell yes">✓</div></div>
-        <div class="comp-row"><div class="comp-criteria">Pas d'honoraires fixes</div><div class="comp-cell peak">✓</div><div class="comp-cell no">✕</div><div class="comp-cell yes">✓</div><div class="comp-cell yes">✓</div></div>
       </div>
     </div>
   </div>
@@ -346,8 +348,16 @@
   <div class="container">
     <span class="label">À propos</span>
     <div class="about-layout">
-      <div class="about-img-wrap">
+      <div class="about-img-wrap" style="display:flex;flex-direction:column;gap:20px;">
         <img class="about-img" src="photo-alexandre.png" alt="Alexandre Dussourd, conseiller en gestion de patrimoine à Nice — Peak Patrimoine">
+        <div class="about-stats" style="margin:0;">
+          <div><span class="stat-num">115</span><span class="stat-lbl">Clients accompagnés</span></div>
+          <div><span class="stat-num">4 ans</span><span class="stat-lbl">D'expérience</span></div>
+        </div>
+        <a class="linkedin-btn" href="https://www.linkedin.com/in/alexdussourd/" target="_blank" rel="noopener" style="width:100%;justify-content:center;box-sizing:border-box;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn — Alexandre Dussourd
+        </a>
       </div>
       <div class="about-text">
         <h2 class="about-name">Alexandre Dussourd</h2>
@@ -355,10 +365,6 @@
         <p>Ex-ingénieur reconverti en consultant patrimonial, Peak Patrimoine est né d'une conviction simple : <em>chaque personne qui travaille dur mérite une stratégie patrimoniale à la hauteur de ses efforts — pas des produits, pas du jargon, une vraie relation de confiance.</em></p>
         <p>Ma mission : vous accompagner dans la durée, comprendre vos projets de vie avant de parler solutions, et vous donner accès à des opportunités jusqu'ici réservées aux grands patrimoines.</p>
         <p>Pour tenir cette promesse, je suis membre d'une <strong>association de conseillers indépendants habilités</strong>, et partenaire d'un <strong>acteur de référence de la gestion de patrimoine en France depuis 1992</strong> — récemment adossé à un fonds d'investissement européen de premier plan — avec accès à des ingénieurs patrimoniaux et à une offre en <strong>architecture ouverte</strong>.</p>
-        <div class="about-stats">
-          <div><span class="stat-num">115</span><span class="stat-lbl">Clients accompagnés</span></div>
-          <div><span class="stat-num">4 ans</span><span class="stat-lbl">D'expérience</span></div>
-        </div>
         <div style="margin-top:20px;padding:18px 22px;background:var(--ambre-l);border-left:3px solid var(--ambre);border-radius:0 10px 10px 0;">
           <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#7A4E0A;margin-bottom:14px;">Notre groupe partenaire · depuis 1992 · +29% de croissance en 2025</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
@@ -380,10 +386,6 @@
             </div>
           </div>
         </div>
-        <a class="linkedin-btn" href="https://www.linkedin.com/in/alexdussourd/" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn — Alexandre Dussourd
-        </a>
       </div>
     </div>
   </div>

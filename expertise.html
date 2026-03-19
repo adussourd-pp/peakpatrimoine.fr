@@ -53,8 +53,22 @@
       .exp-layout{grid-template-columns:1fr;gap:24px;}
       .exp-num{font-size:48px;}
     }
-    @media(max-width:600px){
+    @media(max-width:640px){
       .exp-nav-inner{padding:0 16px;}
+    }
+
+    /* ── BURGER MENU ── */
+    .nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;margin-left:12px;}
+    .nav-burger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
+    .nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .nav-burger.open span:nth-child(2){opacity:0;}
+    .nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    @media(max-width:640px){
+      .nav-burger{display:flex;}
+      .nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:rgba(13,13,13,0.98);backdrop-filter:blur(16px);flex-direction:column;padding:16px 20px 20px;gap:4px;border-bottom:1px solid rgba(240,167,56,0.1);}
+      .nav-links.open{display:flex;}
+      .nav-links a{padding:10px 12px;font-size:14px;color:rgba(255,255,255,0.7);border-radius:6px;}
+      .nav-links .nav-cta{margin-top:8px;text-align:center;background:var(--ambre)!important;color:var(--noir)!important;}
     }
   </style>
 </head>
@@ -63,12 +77,16 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="/">Peak<span>Patrimoine</span></a>
-    <div class="nav-links">
+    <div class="nav-links" id="nav-links">
       <a href="/">Accueil</a>
       <a href="/expertise.html" class="active">Expertise</a>
+      <a href="/rejoindre.html">Nous rejoindre</a>
       <a href="/mentions-legales.html">Mentions légales</a>
       <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener" class="nav-cta">Prendre contact →</a>
     </div>
+    <button class="nav-burger" id="nav-burger" aria-label="Menu" onclick="document.getElementById('nav-links').classList.toggle('open');this.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -271,7 +289,10 @@
   <div class="container">
     <h2>Parlons de votre situation</h2>
     <p>Un audit patrimonial complet, sans engagement et sans honoraires.<br>On part de vos objectifs pour bâtir une stratégie sur-mesure.</p>
-    <a class="btn btn-dark" href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre rendez-vous gratuitement →</a>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn-dark" href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre rendez-vous gratuitement →</a>
+      <a class="btn" href="/rejoindre.html" style="background:transparent;border:2px solid var(--noir);color:var(--noir);font-weight:500;">Nous rejoindre →</a>
+    </div>
   </div>
 </section>
 
@@ -292,7 +313,7 @@
       <div class="footer-col">
         <h4>Contact</h4>
         
-        <a href="mailto:contact@peakpatrimoine.fr">contact@peakpatrimoine.fr</a>
+        <a href="/cdn-cgi/l/email-protection#43202c2d372220370333262228332237312a2e2c2a2d266d2531"><span class="__cf_email__" data-cfemail="97f4f8f9e3f6f4e3d7e7f2f6fce7f6e3e5fefaf8fef9f2b9f1e5">[email&#160;protected]</span></a>
         <a href="https://calendar.app.google/mGV3SWbJjAqieRm79" target="_blank" rel="noopener">Prendre rendez-vous</a>
         <a href="https://www.linkedin.com/in/alexdussourd/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
@@ -305,8 +326,4 @@
 </footer>
 
 <!-- WhatsApp Chat Elfsight -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-391c3857-384e-46b6-a1a9-1c270654a9b5" data-elfsight-app-lazy></div>
-
-</body>
-</html>
+<script data-cfasync="false" 
