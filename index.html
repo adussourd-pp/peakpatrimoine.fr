@@ -85,13 +85,13 @@
     .benefit p{font-size:13px;font-weight:300;color:var(--gris);line-height:1.65;}
 
     .about-layout{display:grid;grid-template-columns:400px 1fr;gap:72px;align-items:center;}
-    .about-img-wrap{position:relative;flex-shrink:0;}
-    .about-img-wrap::before{content:'';position:absolute;top:-16px;left:-16px;right:16px;bottom:16px;border:1.5px solid var(--ambre);border-radius:18px;z-index:0;opacity:0.5;}
-    .about-img-wrap::after{content:'';position:absolute;top:-8px;left:-8px;right:8px;bottom:8px;border:1px solid var(--ambre-m);border-radius:16px;z-index:0;}
+    .about-img-wrap{position:relative;flex-shrink:0;display:flex;flex-direction:column;gap:20px;}
+    .about-img-container{position:relative;}
+    .about-img-container::before{content:'';position:absolute;top:-16px;left:-16px;right:16px;bottom:16px;border:1.5px solid var(--ambre);border-radius:18px;z-index:0;opacity:0.5;}
+    .about-img-container::after{content:'';position:absolute;top:-8px;left:-8px;right:8px;bottom:8px;border:1px solid var(--ambre-m);border-radius:16px;z-index:0;}
     .about-img{width:100%;border-radius:14px;display:block;position:relative;z-index:1;aspect-ratio:1/1;object-fit:cover;object-position:center top;}
     @media(max-width:640px){
-      .about-img-wrap::before,.about-img-wrap::after{display:none;}
-      .about-img-wrap{padding:0;}
+      .about-img-container::before,.about-img-container::after{display:none;}
     }
     .about-name{font-family:'Playfair Display',serif;font-size:34px;font-weight:600;color:var(--noir);margin-bottom:6px;}
     .about-role{font-size:11px;font-weight:600;color:var(--ambre);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:24px;display:block;}
@@ -263,9 +263,9 @@
     </div>
     <div class="hero-badges">
       <div class="hero-badge"><strong>Sans honoraires</strong><span>Aucun frais caché</span></div>
-      <div class="hero-badge"><strong>+100 partenaires</strong><span>De renom</span></div>
       <div class="hero-badge"><strong>Membre d'une association loi 1901</strong><span>Réseau de conseillers indépendants habilités</span></div>
-      <div class="hero-badge"><strong>3,4 Md€ d'encours</strong><span>Groupe partenaire · depuis 1992</span></div>
+      <div class="hero-badge"><strong>Groupe partenaire depuis 1992</strong><span>Adossé à un fonds européen de premier plan</span></div>
+      <div class="hero-badge"><strong>3,4 Md€ d'encours</strong><span>Gérés par notre groupe partenaire</span></div>
     </div>
   </div>
 </header>
@@ -352,7 +352,9 @@
     <span class="label">À propos</span>
     <div class="about-layout">
       <div class="about-img-wrap" style="display:flex;flex-direction:column;gap:20px;">
-        <img class="about-img" src="photo-alexandre.png" alt="Alexandre Dussourd, conseiller en gestion de patrimoine à Nice — Peak Patrimoine">
+        <div class="about-img-container">
+          <img class="about-img" src="photo-alexandre.png" alt="Alexandre Dussourd, conseiller en gestion de patrimoine à Nice — Peak Patrimoine">
+        </div>
         <div class="about-stats" style="margin:0;">
           <div><span class="stat-num">115</span><span class="stat-lbl">Clients accompagnés</span></div>
           <div><span class="stat-num">4 ans</span><span class="stat-lbl">D'expérience</span></div>
