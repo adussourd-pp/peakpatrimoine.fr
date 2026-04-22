@@ -51,10 +51,25 @@
     .articles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:16px;}
     .article-card{background:var(--blanc);border:1px solid var(--bord);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;text-decoration:none;color:inherit;}
     .article-card:hover{border-color:var(--ambre-m);transform:translateY(-3px);box-shadow:0 10px 36px rgba(240,167,56,0.1);}
-    .article-visual{aspect-ratio:16/9;background:linear-gradient(135deg,var(--noir) 0%,var(--noir-2) 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-    .article-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 50% 50%,rgba(240,167,56,0.18) 0%,transparent 70%);}
-    .article-visual-num{position:relative;z-index:1;font-family:'Playfair Display',serif;font-size:64px;font-weight:600;color:var(--ambre);letter-spacing:0.02em;line-height:1;}
-    .article-visual-tag{position:absolute;top:18px;left:18px;z-index:1;font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--noir);background:var(--ambre);padding:5px 10px;border-radius:4px;}
+    .article-visual{aspect-ratio:16/9;background:linear-gradient(135deg,var(--noir) 0%,#1a1a1a 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+    .article-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 70% 50%,rgba(240,167,56,0.16) 0%,transparent 70%);}
+    .article-visual::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--ambre),transparent);opacity:0.4;}
+    .article-visual-tag{position:absolute;top:18px;left:18px;z-index:2;font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--noir);background:var(--ambre);padding:5px 10px;border-radius:4px;}
+
+    /* Vignette éditoriale : évolution CSG sur le PEA */
+    .article-hook{position:relative;z-index:1;display:flex;align-items:flex-end;gap:18px;padding:0 32px;width:100%;justify-content:space-between;}
+    .article-hook-label{font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.38);margin-bottom:8px;display:block;}
+    .article-hook-main{display:flex;flex-direction:column;align-items:flex-start;}
+    .article-hook-main .val{font-family:'Playfair Display',serif;font-size:62px;font-weight:600;color:var(--ambre);line-height:0.95;letter-spacing:-0.02em;}
+    .article-hook-main .val sup{font-size:28px;color:var(--ambre);font-weight:600;vertical-align:top;margin-left:2px;padding-left:0;}
+    .article-hook-main .year{font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-top:8px;}
+    .article-hook-bars{display:flex;align-items:flex-end;gap:7px;height:92px;padding-bottom:4px;}
+    .article-hook-bar{width:18px;background:rgba(255,255,255,0.14);border-radius:2px 2px 0 0;position:relative;}
+    .article-hook-bar span{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:9px;color:rgba(255,255,255,0.5);font-weight:500;letter-spacing:0.04em;white-space:nowrap;}
+    .article-hook-bar.active{background:var(--ambre);box-shadow:0 0 18px rgba(240,167,56,0.35);}
+    .article-hook-bar.active span{color:var(--ambre);font-weight:700;}
+    .article-hook-trend{position:absolute;top:50%;right:20px;transform:translateY(-50%);z-index:2;display:flex;align-items:center;gap:5px;font-size:10px;font-weight:700;letter-spacing:0.08em;color:#E86B3D;background:rgba(232,107,61,0.14);border:1px solid rgba(232,107,61,0.35);padding:4px 9px;border-radius:100px;}
+    .article-hook-trend::before{content:'↑';font-size:12px;}
     .article-body{padding:28px 26px 26px;display:flex;flex-direction:column;flex:1;}
     .article-meta{display:flex;gap:12px;align-items:center;font-size:11px;color:var(--gris);letter-spacing:0.04em;margin-bottom:12px;text-transform:uppercase;font-weight:500;}
     .article-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--ambre);}
@@ -77,7 +92,11 @@
 
     @media(max-width:780px){
       .articles-grid{grid-template-columns:1fr;}
-      .article-visual-num{font-size:52px;}
+      .article-hook{padding:0 22px;gap:14px;}
+      .article-hook-main .val{font-size:48px;}
+      .article-hook-main .val sup{font-size:22px;}
+      .article-hook-bars{height:72px;}
+      .article-hook-bar{width:14px;}
     }
 
     /* ── BURGER MENU ── */
@@ -130,9 +149,21 @@
 
     <div class="articles-grid">
       <a class="article-card" href="/article-pea-2026.html">
-        <div class="article-visual">
+        <div class="article-visual" aria-label="Prélèvements sociaux sur le PEA : 18,6% en 2026, soit +1,4 point vs 2025">
           <span class="article-visual-tag">Fiscalité 2026</span>
-          <span class="article-visual-num">01</span>
+          <span class="article-hook-trend">+1,4&nbsp;pt</span>
+          <div class="article-hook">
+            <div class="article-hook-main">
+              <span class="article-hook-label">PS sur PEA</span>
+              <span class="val">18,6<sup>%</sup></span>
+              <span class="year">1<sup>er</sup> janvier 2026</span>
+            </div>
+            <div class="article-hook-bars" aria-hidden="true">
+              <div class="article-hook-bar" style="height:52%;"><span>15,5</span></div>
+              <div class="article-hook-bar" style="height:72%;"><span>17,2</span></div>
+              <div class="article-hook-bar active" style="height:92%;"><span>18,6</span></div>
+            </div>
+          </div>
         </div>
         <div class="article-body">
           <div class="article-meta">
