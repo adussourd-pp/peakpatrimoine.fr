@@ -31,7 +31,7 @@
 
   <!-- Structured data -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Blog","name":"Articles Peak Patrimoine","description":"Notes d'analyse patrimoniale par Peak Patrimoine.","url":"https://www.peakpatrimoine.fr/articles.html","inLanguage":"fr-FR","publisher":{"@type":"Organization","name":"Peak Patrimoine","url":"https://www.peakpatrimoine.fr","logo":{"@type":"ImageObject","url":"https://www.peakpatrimoine.fr/apple-touch-icon.png"}},"blogPost":[{"@type":"BlogPosting","headline":"Le PEA en 2026 : les règles ont changé","description":"Hausse de CSG, ETF synthétiques sous surveillance, écart comportemental : ce que tout épargnant en ETF doit savoir.","url":"https://www.peakpatrimoine.fr/article-pea-2026.html","datePublished":"2026-04-01","author":{"@type":"Person","name":"Alexandre Dussourd"}}]}
+  {"@context":"https://schema.org","@type":"Blog","name":"Articles Peak Patrimoine","description":"Notes d'analyse patrimoniale par Peak Patrimoine.","url":"https://www.peakpatrimoine.fr/articles.html","inLanguage":"fr-FR","publisher":{"@type":"Organization","name":"Peak Patrimoine","url":"https://www.peakpatrimoine.fr","logo":{"@type":"ImageObject","url":"https://www.peakpatrimoine.fr/apple-touch-icon.png"}},"blogPost":[{"@type":"BlogPosting","headline":"Le PEA en 2026 : les règles ont changé","description":"Hausse de CSG, ETF synthétiques sous surveillance, écart comportemental : ce que tout épargnant en ETF doit savoir.","url":"https://www.peakpatrimoine.fr/article-pea-2026.html","datePublished":"2026-04-01","author":{"@type":"Person","name":"Alexandre Dussourd"}},{"@type":"BlogPosting","headline":"Loi Denormandie 2026 : guide complet, taux et conditions","description":"Jusqu'à 63 000 € de réduction d'impôt pour l'immobilier ancien rénové. Mécanisme, conditions, simulations et risques.","url":"https://www.peakpatrimoine.fr/article-denormandie-2026.html","datePublished":"2026-04-22","author":{"@type":"Person","name":"Alexandre Dussourd"}}]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.peakpatrimoine.fr/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://www.peakpatrimoine.fr/articles.html"}]}
@@ -70,6 +70,19 @@
     .article-hook-bar.active span{color:var(--ambre);font-weight:700;}
     .article-hook-trend{position:absolute;top:50%;right:20px;transform:translateY(-50%);z-index:2;display:flex;align-items:center;gap:5px;font-size:10px;font-weight:700;letter-spacing:0.08em;color:#E86B3D;background:rgba(232,107,61,0.14);border:1px solid rgba(232,107,61,0.35);padding:4px 9px;border-radius:100px;}
     .article-hook-trend::before{content:'↑';font-size:12px;}
+
+    /* Vignette éditoriale Denormandie */
+    .article-hook-denormandie{position:relative;z-index:1;width:100%;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+    .article-hook-denormandie .big{font-family:'Playfair Display',serif;font-size:78px;font-weight:600;color:var(--ambre);line-height:0.9;letter-spacing:-0.02em;}
+    .article-hook-denormandie .big sup{font-size:34px;color:var(--ambre);font-weight:600;vertical-align:top;margin-left:2px;padding-left:0;}
+    .article-hook-denormandie .ladder{display:flex;flex-direction:column;gap:6px;align-items:flex-end;}
+    .article-hook-denormandie .step{display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.55);letter-spacing:0.06em;}
+    .article-hook-denormandie .step .pct{font-family:'Playfair Display',serif;font-size:13px;font-weight:600;color:rgba(255,255,255,0.75);}
+    .article-hook-denormandie .step.active .pct{color:var(--ambre);font-size:15px;}
+    .article-hook-denormandie .step.active{color:var(--ambre);}
+    .article-hook-denormandie .dur{display:inline-block;min-width:42px;text-align:right;font-size:10px;opacity:0.7;}
+    .article-hook-bonus{position:absolute;bottom:14px;left:20px;z-index:2;font-size:10px;font-weight:600;letter-spacing:0.1em;color:rgba(255,255,255,0.55);}
+    .article-hook-bonus strong{color:var(--ambre);font-family:'Playfair Display',serif;font-size:13px;font-weight:700;margin-right:4px;}
     .article-body{padding:28px 26px 26px;display:flex;flex-direction:column;flex:1;}
     .article-meta{display:flex;gap:12px;align-items:center;font-size:11px;color:var(--gris);letter-spacing:0.04em;margin-bottom:12px;text-transform:uppercase;font-weight:500;}
     .article-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--ambre);}
@@ -97,6 +110,9 @@
       .article-hook-main .val sup{font-size:22px;}
       .article-hook-bars{height:72px;}
       .article-hook-bar{width:14px;}
+      .article-hook-denormandie{padding:0 22px;}
+      .article-hook-denormandie .big{font-size:60px;}
+      .article-hook-denormandie .big sup{font-size:26px;}
     }
 
     /* ── BURGER MENU ── */
@@ -179,11 +195,32 @@
         </div>
       </a>
 
-      <div class="article-soon">
-        <span class="article-soon-label">Prochainement</span>
-        <h3>De nouvelles analyses à venir</h3>
-        <p>Nous publions régulièrement des notes sur la fiscalité, l'immobilier, la retraite et la transmission. Revenez bientôt.</p>
-      </div>
+      <a class="article-card" href="/article-denormandie-2026.html">
+        <div class="article-visual" aria-label="Loi Denormandie 2026 : jusqu'à 21% de réduction d'impôt, soit 63 000 € d'économie maximale">
+          <span class="article-visual-tag">Immobilier ancien</span>
+          <div class="article-hook-denormandie">
+            <div class="big">21<sup>%</sup></div>
+            <div class="ladder">
+              <div class="step"><span class="dur">6 ans</span><span class="pct">12%</span></div>
+              <div class="step"><span class="dur">9 ans</span><span class="pct">18%</span></div>
+              <div class="step active"><span class="dur">12 ans</span><span class="pct">21%</span></div>
+            </div>
+          </div>
+          <span class="article-hook-bonus"><strong>63 000 €</strong>d'économie fiscale max.</span>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>Avril 2026</span>
+            <span class="dot"></span>
+            <span>Immobilier</span>
+            <span class="dot"></span>
+            <span>14 min de lecture</span>
+          </div>
+          <h2>Loi Denormandie :<br>l'immobilier ancien <em>qui réduit l'impôt</em></h2>
+          <p>Jusqu'à 63 000 € de réduction d'impôt sur 12 ans, mais sous conditions strictes. Mécanisme, simulations, risques et profils adaptés.</p>
+          <span class="article-cta">Lire le guide</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
